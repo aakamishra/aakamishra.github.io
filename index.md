@@ -6,9 +6,7 @@ My name is Aakash and I love Coding, Engineering, Astronomy, Astrophotography, R
 
 During Lockdown, looking up at the sky can be a source of peace in calm during turbulent times. 
 
-![Image](images/Orion.JPG =250x250)
-
-
+<img src="images/Orion.JPG" alt="Orion" width="200"/>
 
 ## Welcome to the Project Dashboard
 
