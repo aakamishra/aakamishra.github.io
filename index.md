@@ -1,4 +1,16 @@
-## Welcome to GitHub Pages
+## Welcome to the Project Dashboard
+
+My name is Aakash and I love Coding, Engineering, Astronomy, Astrophotography, Robotics, AI, ML, DIY, and Data Science. This website highlights my projects over the years. 
+
+### Astrophotography In the Time of Corona
+
+During Lockdown, looking up at the sky can be a source of peace in calm during turbulent times. 
+
+[Image](src)
+
+
+
+## Welcome to the Project Dashboard
 
 You can use the [editor on GitHub](https://github.com/aakamishra/aakamishra.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
