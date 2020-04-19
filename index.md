@@ -4,7 +4,7 @@ My name is Aakash and I love Coding, Engineering, Astronomy, Astrophotography, R
 
 ### Astrophotography In the Time of Corona
 
-During Lockdown, looking up at the sky can be a source of peace in calm during turbulent times. 
+During Lockdown, looking up at the sky can be a source of peace in calm during turbulent times. :)
 
 <img src="images/Orion.JPG" alt="Orion" width="200"/>
 
