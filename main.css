@@ -1,0 +1,44 @@
+body {
+    background: url('images/background.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+nav ul,
+footer ul {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li,
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+}
+ul.posts li {
+    list-style: none;
+}
+/* Two image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: none;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
