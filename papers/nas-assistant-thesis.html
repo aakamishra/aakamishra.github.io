@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Improving Neural Networks with Generalizable Performance Predictors and Generative Code Language Models · Aakash Mishra</title>
+<meta name="description" content="NAS-Assistant predicts how well any network will perform, ranks which layers matter, and uses a code language model to write better architectures.">
+<meta property="og:title" content="Improving Neural Networks with Generalizable Performance Predictors and Generative Code Language Models · Aakash Mishra">
+<meta property="og:description" content="NAS-Assistant predicts how well any network will perform, ranks which layers matter, and uses a code language model to write better architectures.">
+<meta property="og:image" content="https://aakamishra.github.io/images/papers/thesis.webp">
+<meta property="og:url" content="https://aakamishra.github.io/papers/nas-assistant-thesis.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="/"><i></i>Aakash Mishra</a>
+<ul><li><a href="/research.html" aria-current="page">Research</a></li><li><a href="/experience.html">Experience</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/hobbies.html">Hobbies</a></li></ul>
+</div></nav>
+<main>
+
+<header class="paper-hero wrap">
+<div class="crumb"><a href="/research.html">Research</a> / Harvard University, undergraduate thesis</div>
+<h1>Improving Neural Networks with Generalizable Performance Predictors and Generative Code Language Models</h1>
+
+<p class="authors"><b>Aakash Mishra</b></p>
+<p class="meta">Harvard University, undergraduate thesis · May 2023 · Advised by Stratos Idreos</p>
+<div class="pills"><a href="/documents/thesis.pdf" class="main">PDF</a><a href="#cite">Cite</a></div>
+<figure class="figure">
+<div class="frame"><img src="/images/papers/thesis.webp" alt="NAS-Assistant workflow: a model and its data pass through a performance predictor and layer ranking to a generative code model that writes a new model" class="" loading="lazy"></div>
+<figcaption>NAS-Assistant workflow: a model and its data pass through a performance predictor and layer ranking to a generative code model that writes a new model</figcaption>
+</figure>
+</header>
+<section class="wrap paper-body">
+<div>
+<p class="tldr">NAS-Assistant predicts how well any network will perform, ranks which layers matter, and uses a code language model to write better architectures.</p>
+<h2>Abstract</h2>
+<div class="abstract"><p>Neural Architecture Search (NAS) is a growing field with many evolving facets, from evaluation strategies and search-space criteria to architecture optimization and performance prediction. These spaces are currently disjoint and constrained by a lack of generalizability: structured search spaces restrict algorithms to specific architectures, while performance estimators are fixed to given benchmarks without the ability to conduct zero-shot evaluation.</p><p>Using advances in generative AI, we present a combination of these methods in a tool called NAS-Assistant. It consists of a new generalizable GNN-based neural architecture encoder and a clustering, attention-based regression network that predicts model performance with high accuracy and transferability. We also propose a method for evaluating the contribution of each layer of a network, combined with zero-cost NAS evaluation. Lastly, we develop a framework for using generative code language models to explore any model search space requested from NAS-Assistant. This thesis aims to demonstrate the first integrated generative AI optimizer for Neural Architecture Search.</p></div>
+<div class="bib" id="cite"><h2>Cite</h2>
+<pre id="bib-nas-assistant-thesis">@thesis{mishra2023generalizable,
+  title = {Improving Neural Networks with Generalizable Performance Predictors and Generative Code Language Models},
+  author = {Aakash Mishra},
+  year = {2023},
+  school = {Harvard University},
+  note = {Undergraduate thesis, advised by Stratos Idreos}
+}</pre>
+<button type="button" data-copy="bib-nas-assistant-thesis">Copy</button></div>
+</div>
+<aside class="side"><dl>
+<dt>Venue</dt><dd>Harvard University, undergraduate thesis</dd>
+<dt>Date</dt><dd>May 2023</dd>
+<dt>Topic</dt><dd>Systems & optimization</dd>
+<dt>Authors</dt><dd>1</dd>
+</dl></aside>
+</section>
+<nav class="wrap next" aria-label="More research"><a href="/papers/multi-fidelity-scheduling.html"><span>← Newer</span>Rapid and Low-Cost Evaluation of Multi-fidelity Scheduling Algorithms for Hyperparameter Optimization</a><a class="r" href="/papers/zero-shot-cxr.html"><span>Older →</span>Improving Zero-Shot Detection of Low Prevalence Chest Pathologies using Domain Pre-trained Language Models</a></nav>
+
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="mail link" href="mailto:aakamishra1@gmail.com">aakamishra1@gmail.com</a>
+<small>© 2026 Aakash Mishra</small></div>
+<div class="links"><a href="https://github.com/aakamishra" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aakash-mishra/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/aakamishra1" target="_blank" rel="noopener">X</a><a href="https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ" target="_blank" rel="noopener">Scholar</a><a href="https://www.instagram.com/aakamishra" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

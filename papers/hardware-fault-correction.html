@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adaptive Controls for Hardware Fault-Correction in Embedded Systems · Aakash Mishra</title>
+<meta name="description" content="A robot that diagnoses and works around its own hardware faults. A graph network reads firmware to spot a failing motor, and an RL agent reroutes power to keep the robot on track.">
+<meta property="og:title" content="Adaptive Controls for Hardware Fault-Correction in Embedded Systems · Aakash Mishra">
+<meta property="og:description" content="A robot that diagnoses and works around its own hardware faults. A graph network reads firmware to spot a failing motor, and an RL agent reroutes power to keep the robot on track.">
+<meta property="og:image" content="https://aakamishra.github.io/images/papers/fault-correction.webp">
+<meta property="og:url" content="https://aakamishra.github.io/papers/hardware-fault-correction.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="/"><i></i>Aakash Mishra</a>
+<ul><li><a href="/research.html" aria-current="page">Research</a></li><li><a href="/experience.html">Experience</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/hobbies.html">Hobbies</a></li></ul>
+</div></nav>
+<main>
+
+<header class="paper-hero wrap">
+<div class="crumb"><a href="/research.html">Research</a> / Stanford University</div>
+<h1>Adaptive Controls for Hardware Fault-Correction in Embedded Systems</h1>
+
+<p class="authors"><b>Aakash Mishra</b>, Dea Dressel</p>
+<p class="meta">Stanford University · Dec 2023</p>
+<div class="pills"><a href="/documents/papers/hardware-fault-correction.pdf" class="main">PDF</a><a href="https://github.com/aakamishra/embedded-repair-mp" target="_blank" rel="noopener">Code ↗</a><a href="#cite">Cite</a></div>
+<figure class="figure">
+<div class="frame"><img src="/images/papers/fault-correction.webp" alt="Fault detection from firmware parse trees with a graph network, feeding an RL agent that adapts the robot&#x27;s controls" class="" loading="lazy"></div>
+<figcaption>Fault detection from firmware parse trees with a graph network, feeding an RL agent that adapts the robot&#x27;s controls</figcaption>
+</figure>
+</header>
+<section class="wrap paper-body">
+<div>
+<p class="tldr">A robot that diagnoses and works around its own hardware faults. A graph network reads firmware to spot a failing motor, and an RL agent reroutes power to keep the robot on track.</p>
+<h2>Abstract</h2>
+<div class="abstract"><p>Embedded system fault detection is a multi-modal problem that can be difficult to solve, especially for real-time detection and correction on remotely deployed systems. Standard ways of assessing a bug on a deployed system are subject to temporal and physical constraints, and it can be hard to tell whether sensor input is reliable or whether a motor is behaving nominally.</p><p>We propose an autonomous method with three new pieces. First, a new intermediate representation for embedded firmware called a Hardware Highlight Parse Tree (HHPT). Second, a GNN-based detector that finds anomalous hardware behavior. Third, a reinforcement-learning system that adaptively controls its hardware in response to those anomalies, combined with the GNN detector. We show that it is possible to build a robust, adaptive system that can self-diagnose and correct hardware issues that would otherwise be hard to recover from.</p></div>
+<div class="bib" id="cite"><h2>Cite</h2>
+<pre id="bib-hardware-fault-correction">@techreport{mishra2023adaptive,
+  title = {Adaptive Controls for Hardware Fault-Correction in Embedded Systems},
+  author = {Aakash Mishra and Dea Dressel},
+  year = {2023},
+  institution = {Stanford University}
+}</pre>
+<button type="button" data-copy="bib-hardware-fault-correction">Copy</button></div>
+</div>
+<aside class="side"><dl>
+<dt>Venue</dt><dd>Stanford University</dd>
+<dt>Date</dt><dd>Dec 2023</dd>
+<dt>Topic</dt><dd>Robotics & RL</dd>
+<dt>Authors</dt><dd>2</dd>
+</dl></aside>
+</section>
+<nav class="wrap next" aria-label="More research"><a href="/papers/urdf-language-reasoning.html"><span>← Newer</span>Towards Natural Language Reasoning for Unified Robotics Description Format Files</a><a class="r" href="/papers/multi-fidelity-scheduling.html"><span>Older →</span>Rapid and Low-Cost Evaluation of Multi-fidelity Scheduling Algorithms for Hyperparameter Optimization</a></nav>
+
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="mail link" href="mailto:aakamishra1@gmail.com">aakamishra1@gmail.com</a>
+<small>© 2026 Aakash Mishra</small></div>
+<div class="links"><a href="https://github.com/aakamishra" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aakash-mishra/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/aakamishra1" target="_blank" rel="noopener">X</a><a href="https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ" target="_blank" rel="noopener">Scholar</a><a href="https://www.instagram.com/aakamishra" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

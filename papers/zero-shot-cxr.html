@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Improving Zero-Shot Detection of Low Prevalence Chest Pathologies using Domain Pre-trained Language Models · Aakash Mishra</title>
+<meta name="description" content="Swapping a CLIP model&#x27;s text tower for one pre-trained on clinical text hurts on common chest findings but helps a lot on rare ones.">
+<meta property="og:title" content="Improving Zero-Shot Detection of Low Prevalence Chest Pathologies using Domain Pre-trained Language Models · Aakash Mishra">
+<meta property="og:description" content="Swapping a CLIP model&#x27;s text tower for one pre-trained on clinical text hurts on common chest findings but helps a lot on rare ones.">
+<meta property="og:image" content="https://aakamishra.github.io/images/papers/zero-shot-cxr.webp">
+<meta property="og:url" content="https://aakamishra.github.io/papers/zero-shot-cxr.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="/"><i></i>Aakash Mishra</a>
+<ul><li><a href="/research.html" aria-current="page">Research</a></li><li><a href="/experience.html">Experience</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/hobbies.html">Hobbies</a></li></ul>
+</div></nav>
+<main>
+
+<header class="paper-hero wrap">
+<div class="crumb"><a href="/research.html">Research</a> / MIDL 2023, short paper</div>
+<h1>Improving Zero-Shot Detection of Low Prevalence Chest Pathologies using Domain Pre-trained Language Models</h1>
+
+<p class="authors"><b>Aakash Mishra</b>, Rajat Mittal, Christy Jestin, Kostas Tingos, Pranav Rajpurkar</p>
+<p class="meta">MIDL 2023, short paper · Apr 2023</p>
+<div class="pills"><a href="https://arxiv.org/abs/2306.08000" class="main" target="_blank" rel="noopener">arXiv ↗</a><a href="https://github.com/aakamishra/zero-shot-low-prevalence-CXR-detection" target="_blank" rel="noopener">Code ↗</a><a href="#cite">Cite</a></div>
+<figure class="figure">
+<div class="frame"><img src="/images/papers/zero-shot-cxr.webp" alt="An image tower paired with a BERT text tower whose weights come from transformers pre-trained on MIMIC-III and PubMed" class="" loading="lazy"></div>
+<figcaption>An image tower paired with a BERT text tower whose weights come from transformers pre-trained on MIMIC-III and PubMed</figcaption>
+</figure>
+</header>
+<section class="wrap paper-body">
+<div>
+<p class="tldr">Swapping a CLIP model&#x27;s text tower for one pre-trained on clinical text hurts on common chest findings but helps a lot on rare ones.</p>
+<h2>Abstract</h2>
+<div class="abstract"><p>Recent advances in zero-shot learning have enabled the use of paired image-text data to replace structured labels, removing the need for expert-annotated datasets. Models such as CLIP-based CheXzero use these advances for chest X-ray interpretation.</p><p>We hypothesize that domain pre-trained models such as CXR-BERT, BlueBERT, and ClinicalBERT can improve CLIP-like models with domain knowledge by replacing BERT weights, at the cost of breaking the original model&#x27;s alignment. We evaluate zero-shot classification models with domain-specific pre-training for detecting low-prevalence pathologies. Even though replacing the weights of the original CLIP-BERT degrades performance on common pathologies, pre-trained text towers perform much better on low-prevalence diseases. This motivates future ensembles that combine differently trained language models.</p></div>
+<div class="bib" id="cite"><h2>Cite</h2>
+<pre id="bib-zero-shot-cxr">@inproceedings{mishra2023improving,
+  title = {Improving Zero-Shot Detection of Low Prevalence Chest Pathologies using Domain Pre-trained Language Models},
+  author = {Aakash Mishra and Rajat Mittal and Christy Jestin and Kostas Tingos and Pranav Rajpurkar},
+  year = {2023},
+  booktitle = {Medical Imaging with Deep Learning, short paper track},
+  eprint = {2306.08000},
+  archivePrefix = {arXiv}
+}</pre>
+<button type="button" data-copy="bib-zero-shot-cxr">Copy</button></div>
+</div>
+<aside class="side"><dl>
+<dt>Venue</dt><dd>MIDL 2023, short paper</dd>
+<dt>Date</dt><dd>Apr 2023</dd>
+<dt>Topic</dt><dd>Medical AI</dd>
+<dt>Authors</dt><dd>5</dd>
+</dl></aside>
+</section>
+<nav class="wrap next" aria-label="More research"><a href="/papers/nas-assistant-thesis.html"><span>← Newer</span>Improving Neural Networks with Generalizable Performance Predictors and Generative Code Language Models</a><a class="r" href="/papers/active-centaurs-photometry.html"><span>Older →</span>Photometry of Active Centaurs: Colors of Dormant Active Centaur Nuclei</a></nav>
+
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="mail link" href="mailto:aakamishra1@gmail.com">aakamishra1@gmail.com</a>
+<small>© 2026 Aakash Mishra</small></div>
+<div class="links"><a href="https://github.com/aakamishra" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aakash-mishra/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/aakamishra1" target="_blank" rel="noopener">X</a><a href="https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ" target="_blank" rel="noopener">Scholar</a><a href="https://www.instagram.com/aakamishra" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+{
+  "name": "Aakash Mishra",
+  "tagline": "Founding Researcher at Epsilon Health",
+  "bio": "I build medical imaging and language models at Epsilon Health, an AI-native radiology practice in San Francisco. Before that I spent three years at Meta, most recently as a senior machine learning engineer and area lead in Monetization. I studied computer science at Harvard and Stanford.",
+  "interests": [
+    "Medical imaging",
+    "Vision-language models",
+    "Reinforcement learning",
+    "ML systems",
+    "Astronomy"
+  ],
+  "email": "aakamishra1@gmail.com",
+  "social": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/aakamishra"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/aakash-mishra/"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/aakamishra1"
+    },
+    {
+      "label": "Scholar",
+      "url": "https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/aakamishra"
+    }
+  ],
+  "epsilon": {
+    "role": "Founding Researcher",
+    "blurb": "Epsilon is an AI-native radiology practice. Our models support Epsilon's own radiologists as they read X-rays. I work on how those models see, explain and report.",
+    "url": "https://www.epsilon.health"
+  },
+  "work": [
+    {
+      "org": "Epsilon Health",
+      "role": "Founding Researcher",
+      "when": "2025 – now",
+      "where": "San Francisco",
+      "url": "https://www.epsilon.health",
+      "points": [
+        "Founding member of the research team behind an AI-native radiology practice.",
+        "Training and serving the imaging and report-generation models used by Epsilon's radiologists.",
+        "Published research on model explainability and X-ray preprocessing."
+      ],
+      "papers": [
+        "auditing-model-attention",
+        "cr-image-preprocessing"
+      ]
+    },
+    {
+      "org": "Meta",
+      "role": "Senior Machine Learning Engineer, Area Lead",
+      "when": "2023 – 2025",
+      "where": "Menlo Park",
+      "points": [
+        "Area lead in Facebook Monetization, driving zero-to-one ML projects shipped to billions of users.",
+        "First author on causal-informed online optimization for ad-load personalization, published at a NeurIPS 2025 workshop."
+      ],
+      "papers": [
+        "ad-load-personalization"
+      ]
+    },
+    {
+      "org": "Solesca",
+      "role": "Machine Learning Engineer (part-time)",
+      "when": "2023",
+      "points": [
+        "Trained a sentiment model to predict community response to proposed solar projects, fed by a pipeline that scraped town-hall notes and news.",
+        "Fine-tuned GPT-2 to summarize renewable-energy articles, and built a geospatial graph network to predict a project's effect on incident light."
+      ]
+    },
+    {
+      "org": "Meta",
+      "role": "Software Engineering Intern",
+      "when": "Summer 2022",
+      "points": [
+        "Designed a framework that detects user-identifying information in ML training data, and automated privacy checks for model deployment.",
+        "Integrated a feature-engineering framework into the serving platform. Earned a return offer."
+      ]
+    },
+    {
+      "org": "REX Real Estate",
+      "role": "Software Engineering Intern",
+      "when": "2021 – 2022",
+      "points": [
+        "Built AWS EMR and S3 data infrastructure with Terraform, plus Ranger access control for Hive.",
+        "Wrote Airflow pipelines that moved terabytes of data to Salesforce through Kafka."
+      ]
+    },
+    {
+      "org": "MIT IS&T",
+      "role": "Cybersecurity Intern",
+      "when": "2020 – 2021",
+      "points": [
+        "Built a Django REST API for DHCP and ARP network data, and a 3D view of over 10,000 intrusion alerts an hour.",
+        "Wrote parsers that organized more than 30 TB of security data."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Stanford University",
+      "degree": "MS, Computer Science",
+      "when": "2023 – 2024",
+      "notes": [
+        "GPA 4.15",
+        "Vice President, CS Student Council"
+      ]
+    },
+    {
+      "school": "Harvard University",
+      "degree": "AB, Computer Science, summa cum laude",
+      "when": "2019 – 2023",
+      "notes": [
+        "GPA 3.99",
+        "Thesis with Stratos Idreos, Data Systems Lab",
+        "Teaching Fellow for CS161 (Operating Systems) and CS209B (Advanced Data Science)",
+        "President, Harvard Undergraduate Robotics"
+      ]
+    }
+  ],
+  "honors": [
+    {
+      "what": "First place, Correlation One / Citadel Boston Regional Datathon ($15,000)",
+      "when": "2022"
+    },
+    {
+      "what": "Certificate of Distinction in Teaching, Harvard",
+      "when": "2022"
+    },
+    {
+      "what": "Harvard Scholar Award (top 5% of class)",
+      "when": "2020, 2021"
+    },
+    {
+      "what": "National AP Scholar",
+      "when": "2019"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Distributed Traffic Control",
+      "year": "2023",
+      "img": "/images/exp_setup.png",
+      "text": "Fault-tolerant traffic-light control with reinforcement learning agents that coordinate over gRPC, so the grid keeps working when some agents fail.",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/aakamishra/distributed-traffic-control"
+        }
+      ]
+    },
+    {
+      "title": "PHOSS",
+      "year": "2022",
+      "img": null,
+      "stat": "pip install phoss",
+      "text": "A simulator for distributed hyperparameter search. It generates synthetic loss landscapes so schedulers can be compared without training real models.",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/aakamishra/phoss"
+        },
+        {
+          "label": "PyPI",
+          "url": "https://pypi.org/project/phoss/"
+        }
+      ]
+    },
+    {
+      "title": "RayICV",
+      "year": "2022",
+      "img": "/images/RayDiagram.png",
+      "text": "Hyperparameter tuning with cross-validation built in, on top of Ray Train. Schedules jobs by fold and model configuration.",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/aakamishra/RayICV"
+        }
+      ]
+    },
+    {
+      "title": "Ray PowerSGD",
+      "year": "2022",
+      "img": null,
+      "stat": "all-reduce · NCCL",
+      "text": "A Ray-based all-reduce implementation of PowerSGD, the low-rank gradient compression method for distributed training.",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/aakamishra/ray-powerSGD"
+        }
+      ]
+    },
+    {
+      "title": "Boston Datathon winner",
+      "year": "2022",
+      "img": "/images/datathon_news.png",
+      "text": "A k-nearest-neighbors take on synthetic control over 70,000 NIH patient records. Showed a causal effect of glipizide on heart failure outcomes and won first place.",
+      "links": [
+        {
+          "label": "Certificate",
+          "url": "https://www.credential.net/1c6fa583-57f2-42f9-9256-3151e4acadd4"
+        }
+      ]
+    },
+    {
+      "title": "Harvard RoboCup",
+      "year": "2020 – 2023",
+      "img": "/images/robocup_logo.jpeg",
+      "text": "Robot soccer players that combine control, vision and strategy. I led the team and wrote both firmware and high-level strategy code.",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/aakamishra/robocup-prototype"
+        }
+      ]
+    },
+    {
+      "title": "NoetherAutoDiff",
+      "year": "2020",
+      "img": null,
+      "stat": "∂f/∂x",
+      "text": "An automatic differentiation library for differential-equation matrices written as text or LaTeX, usable from C++ and Python.",
+      "links": [
+        {
+          "label": "PyPI",
+          "url": "https://pypi.org/project/NoetherAutoDiff/"
+        }
+      ]
+    },
+    {
+      "title": "dftoltx",
+      "year": "2022",
+      "img": null,
+      "stat": "\\begin{tabular}",
+      "text": "Turns pandas DataFrames into LaTeX table code.",
+      "links": [
+        {
+          "label": "PyPI",
+          "url": "https://pypi.org/project/dftoltx/"
+        }
+      ]
+    }
+  ],
+  "sky": [
+    {
+      "id": "m31",
+      "name": "Andromeda Galaxy",
+      "cat": "M31",
+      "img": "/images/space7.JPG",
+      "kind": "Spiral galaxy",
+      "constellation": "Andromeda",
+      "distance": "2.5 million light-years",
+      "scope": "Clay Telescope, Harvard",
+      "ra": 0.712,
+      "dec": 41.27,
+      "wide": "wide",
+      "label": "M31 Andromeda"
+    },
+    {
+      "id": "m42",
+      "name": "Orion Nebula",
+      "cat": "M42",
+      "img": "/images/space5.JPG",
+      "kind": "Emission nebula",
+      "constellation": "Orion",
+      "distance": "1,344 light-years",
+      "scope": "Clay Telescope, Harvard",
+      "ra": 5.588,
+      "dec": -5.39,
+      "label": "M42 Orion Nebula"
+    },
+    {
+      "id": "neowise-dawn",
+      "name": "Comet NEOWISE at dawn",
+      "cat": "C/2020 F3",
+      "img": "/images/space1.jpg",
+      "kind": "Comet",
+      "constellation": "Auriga (approx.)",
+      "distance": "~0.7 AU",
+      "scope": "Nikon DSLR, wide angle",
+      "ra": 5.7,
+      "dec": 38.0,
+      "when": "July 2020",
+      "label": "NEOWISE (dawn)",
+      "side": "left"
+    },
+    {
+      "id": "neowise-dusk",
+      "name": "Comet NEOWISE at dusk",
+      "cat": "C/2020 F3",
+      "img": "/images/space2.jpg",
+      "kind": "Comet",
+      "constellation": "Ursa Major (approx.)",
+      "distance": "~0.7 AU",
+      "scope": "Nikon DSLR, long exposure",
+      "ra": 9.6,
+      "dec": 45.0,
+      "when": "July 2020",
+      "wide": "wide-lg",
+      "label": "NEOWISE (dusk)"
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "cat": "Planet",
+      "img": "/images/space3.PNG",
+      "kind": "Gas giant",
+      "constellation": "Sagittarius (summer 2020)",
+      "distance": "~9 AU",
+      "scope": "Home-built Newtonian reflector",
+      "ra": 20.07,
+      "dec": -20.6,
+      "when": "Summer 2020",
+      "label": "Saturn"
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "cat": "Planet",
+      "img": "/images/space6.PNG",
+      "kind": "Gas giant",
+      "constellation": "Sagittarius (summer 2020)",
+      "distance": "~4.2 AU",
+      "scope": "Home-built Newtonian reflector",
+      "ra": 19.6,
+      "dec": -21.6,
+      "when": "Summer 2020",
+      "side": "left",
+      "label": "Jupiter"
+    },
+    {
+      "id": "moon",
+      "name": "Waning Moon",
+      "cat": "Luna",
+      "img": "/images/space4.PNG",
+      "kind": "Natural satellite",
+      "constellation": "Moves through the zodiac",
+      "distance": "384,400 km",
+      "scope": "Home-built Newtonian reflector",
+      "ra": null,
+      "dec": null,
+      "label": "Moon"
+    }
+  ],
+  "hobbies": [
+    {
+      "title": "Surfing",
+      "img": "/images/me/surfing.jpg",
+      "alt": "Aakash on the beach holding a blue soft-top surfboard",
+      "text": "Paddling out on the Pacific whenever the swell cooperates."
+    },
+    {
+      "title": "Photography",
+      "img": "/images/me/photography.jpg",
+      "alt": "Aakash with a DSLR at Tunnel View in Yosemite",
+      "text": "Landscapes by day and the night sky after dark."
+    }
+  ]
+}

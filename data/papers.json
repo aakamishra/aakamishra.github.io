@@ -1,0 +1,570 @@
+[
+  {
+    "slug": "auditing-model-attention",
+    "title": "Auditing Our Models for Visual Explainability",
+    "subtitle": "Is learned attention sufficient for faithful and well-localized heatmaps?",
+    "date": "2026-07-29",
+    "venue": "Epsilon Health Research",
+    "authors": [
+      "Aakash Mishra",
+      "Arjun Karpur"
+    ],
+    "tags": [
+      "medical"
+    ],
+    "featured": true,
+    "epsilon": true,
+    "media": {
+      "src": "/images/epsilon/attention.gif",
+      "alt": "Report-model attention moving across a hand radiograph as each finding is written",
+      "fit": "contain"
+    },
+    "summary": "A heatmap can reflect what a model computed and still point at the wrong anatomy. We score our models' explanations on localization and faithfulness, and find that learned attention holds up on both.",
+    "abstract": [
+      "Saliency heatmaps derived from internal mechanisms are routinely used to justify the predictions of radiology ML models, but a heatmap that reflects the computation behind a prediction need not be anatomically reasonable. In this post, we evaluate the interpretability of our CR pathology classification and radiology report generation models. Specifically, we evaluate the various heatmap explanations produced by our models along two axes (localization and faithfulness) and find that learned attention weights provide useful visual explainability information that is strongly rooted in the model's internal reasoning."
+    ],
+    "links": [
+      {
+        "label": "Read the post",
+        "url": "https://www.epsilon.health/research/auditing-model-attention"
+      }
+    ],
+    "bib": {
+      "type": "misc",
+      "key": "mishra2026auditing",
+      "howpublished": "Epsilon Health Research",
+      "url": "https://www.epsilon.health/research/auditing-model-attention"
+    }
+  },
+  {
+    "slug": "cr-image-preprocessing",
+    "title": "Going Beyond ImageNet Preprocessing for X-ray Vision Models",
+    "subtitle": "Building a CR image preprocessor from the ground up",
+    "date": "2026-08-19",
+    "venue": "Epsilon Health Research",
+    "authors": [
+      "Arjun Karpur",
+      "Aakash Mishra"
+    ],
+    "tags": [
+      "medical"
+    ],
+    "featured": true,
+    "epsilon": true,
+    "media": {
+      "src": "/images/epsilon/preprocessing.gif",
+      "alt": "A foot radiograph passing through Epsilon's CR preprocessing pipeline",
+      "fit": "cover"
+    },
+    "summary": "X-rays are not natural images, so their preprocessing shouldn't be borrowed from ImageNet. We measure what makes CR images different, build a pipeline for them, and ablate each design choice.",
+    "abstract": [
+      "Most vision models for radiology are fed by a preprocessing pipeline inherited from natural images: normalize the pixels, crop or squeeze the frame into a fixed square, and hand it to the backbone. X-ray images are not natural images, however, and the preprocessing pipeline should reflect this. In this post, we identify and measure a handful of image characteristics specific to CR (computed radiography) and propose our CR image preprocessing pipeline. We run a series of ablation experiments to study the sensitivity of pathology classification models to the image preprocessor's design decisions."
+    ],
+    "links": [
+      {
+        "label": "Read the post",
+        "url": "https://www.epsilon.health/research/cr-image-preprocessing"
+      }
+    ],
+    "bib": {
+      "type": "misc",
+      "key": "karpur2026beyond",
+      "howpublished": "Epsilon Health Research",
+      "url": "https://www.epsilon.health/research/cr-image-preprocessing"
+    }
+  },
+  {
+    "slug": "ad-load-personalization",
+    "title": "Causal-Informed Hybrid Online Adaptive Optimization for Ad Load Personalization in Large-Scale Social Networks",
+    "date": "2025-12-01",
+    "venue": "NeurIPS 2025 Workshop on Constrained Optimization for ML",
+    "authors": [
+      "Aakash Mishra",
+      "Qi Xu",
+      "Zhigang Hua",
+      "Keyu Nie",
+      "Vishwanath Sangale",
+      "Vishal Vaingankar",
+      "Jizhe Zhang",
+      "Ren Mao"
+    ],
+    "tags": [
+      "systems"
+    ],
+    "featured": true,
+    "media": {
+      "src": "/images/papers/ad-load.webp",
+      "alt": "System diagram: an upstream causal model informs an online adaptive tuning engine that sets ad load under constraints",
+      "fit": "contain"
+    },
+    "summary": "Combines constraint-safe primal-dual control with trust-region Bayesian optimization, guided by a causal model, to personalize how many ads people see. Tested in live A/B tests on a billion-user social network.",
+    "abstract": [
+      "Personalizing ad load in large-scale social networks requires balancing user experience and conversions under operational constraints. Traditional primal-dual methods enforce constraints reliably but adapt slowly in dynamic environments, while Bayesian Optimization (BO) enables exploration but suffers from slow convergence.",
+      "We propose a hybrid online adaptive optimization framework, CTRCBO (Cohort-Based Trust Region Contextual Bayesian Optimization), combining primal-dual with BO, enhanced by trust-region updates and Gaussian Process Regression (GPR) surrogates for both objectives and constraints. Our approach leverages an upstream causal ML model to inform the surrogate, improving decision quality and enabling efficient exploration-exploitation and online tuning.",
+      "We evaluate our method on a billion-user social network, demonstrating faster convergence, robust constraint satisfaction, and improved personalization metrics, including real-world online A/B test results."
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2602.10129"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2602.10129"
+      },
+      {
+        "label": "NeurIPS",
+        "url": "https://neurips.cc/virtual/2025/123291"
+      },
+      {
+        "label": "Slides",
+        "url": "https://nips.cc/media/neurips-2025/Slides/123291.pdf"
+      }
+    ],
+    "bib": {
+      "type": "inproceedings",
+      "key": "mishra2025causal",
+      "booktitle": "NeurIPS 2025 Workshop on Constrained Optimization for Machine Learning",
+      "eprint": "2602.10129"
+    }
+  },
+  {
+    "slug": "llm-cardiology-evaluation",
+    "title": "Unmasking True Clinical Competence: The Importance of Adaptive and Open-Ended Evaluation for Large Language Models in Cardiology",
+    "date": "2025-05-19",
+    "venue": "medRxiv",
+    "authors": [
+      "Chieh-Ju Chao",
+      "Abhinav Kumar",
+      "Aakash Mishra",
+      "Yu-Chiang Wang",
+      "Chieh-Mei Tsai",
+      "Nima Baba Ali",
+      "Somanshu Sharma",
+      "Juan M. Farina",
+      "Reza Arsanjani",
+      "Yucheng Jiang",
+      "Monica Lam"
+    ],
+    "tags": [
+      "medical"
+    ],
+    "stat": {
+      "value": "93.9% → 66.7%",
+      "label": "accuracy once key clinical details in the question change"
+    },
+    "summary": "Multiple-choice scores make LLMs look better at cardiology than they are. Open-ended and clinically modified questions expose the gap.",
+    "abstract": [
+      "Background: Large language models (LLMs) achieve impressive accuracy on multiple-choice (MC) medical examinations, but this performance alone may not accurately reflect their clinical reasoning abilities. MC evaluations of LLMs risk inflating apparent competence by rewarding recall rather than genuine clinical adaptability, particularly in specialized medical domains such as cardiology.",
+      "Methods: We assessed GPT o1-preview using 185 board-style cardiology questions from the American College of Cardiology Self-Assessment Program (ACCSAP) in MC and open-ended formats. A subset of 66 questions underwent modifications of critical clinical parameters (e.g., ascending aorta diameter, ejection fraction) to evaluate model adaptability to context changes. The model's answer and reasoning correctness were graded by cardiology experts.",
+      "Results: GPT o1-preview demonstrated high baseline accuracy on MC questions (93.0% answers, 92.4% reasoning). Performance significantly decreased with open-ended questions (80.0% answers, 80.5% reasoning; p<0.001). For modified MC questions, accuracy decreased significantly (answers: 93.9% to 66.7%; reasoning: 93.9% to 71.2%; both p<0.001), as did answer-reasoning concordance (93.9% to 66.7%, p<0.001).",
+      "Conclusions: Using existing MC question formats substantially overestimates the performance and clinical reasoning capabilities of GPT o1-preview. Incorporating open-ended, clinically adaptive questions and evaluating answer-reasoning concordance are essential for accurately assessing the real-world clinical decision-making competencies of LLMs in cardiology."
+    ],
+    "links": [
+      {
+        "label": "medRxiv",
+        "url": "https://www.medrxiv.org/content/10.1101/2025.05.17.25327814v1"
+      }
+    ],
+    "bib": {
+      "type": "article",
+      "key": "chao2025unmasking",
+      "journal": "medRxiv",
+      "doi": "10.1101/2025.05.17.25327814"
+    }
+  },
+  {
+    "slug": "semantic-caching-llm-scheduling",
+    "title": "Optimizing Semantic Caching for Sequence Prediction and Memory-Optimized LLM Inference Scheduling",
+    "date": "2024-06-01",
+    "venue": "Stanford University",
+    "authors": [
+      "Aakash Mishra"
+    ],
+    "tags": [
+      "systems"
+    ],
+    "featured": true,
+    "media": {
+      "src": "/images/papers/semanticache.webp",
+      "alt": "Prompts flow through an encoder and semantic cache to a token-length predictor and a scheduler in front of the vLLM engine",
+      "fit": "contain"
+    },
+    "summary": "Predicts how long each LLM answer will be by reusing predictions for similar past prompts, then serves short jobs first in vLLM. 60% faster end-to-end.",
+    "abstract": [
+      "The growing prevalence of LLMs has presented a need for scalable inference platforms. Proxy-modelling for output token length presents an opportunity to schedule inference jobs more effectively using shortest-job first. We show that this method can be further optimized by using a semantic cache that uses query similarity to cache the output token length of similar prompts.",
+      "We show that the accuracy of the proxy model can be boosted with semantic caching as well as a reduction in the regressor overhead. We integrate our approach with vLLM's memory-optimized inference platform and show a 60% improvement in end-to-end vLLM inference time for the facebook/opt-125m model."
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "/documents/papers/semantic-caching-llm-scheduling.pdf"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/aakamishra/SemantiCache"
+      }
+    ],
+    "bib": {
+      "type": "techreport",
+      "key": "mishra2024semantic",
+      "institution": "Stanford University"
+    }
+  },
+  {
+    "slug": "microgrid-deep-q-learning",
+    "title": "Keeping the Lights On for Campus: Deep Q-Learning and MDPs for Micro-Energy Grid Optimization",
+    "date": "2024-12-01",
+    "venue": "Stanford University",
+    "authors": [
+      "Yasmina Abukhadra",
+      "Aakash Mishra"
+    ],
+    "tags": [
+      "control"
+    ],
+    "media": {
+      "src": "/images/papers/microgrid.webp",
+      "alt": "UC San Diego campus energy demand over 2018 to 2020 with the learned policy's actions overlaid",
+      "fit": "contain"
+    },
+    "summary": "Frames a campus microgrid as a Markov decision process and learns when to store, use or buy energy. The deep Q-learning policy saves over $50,000 compared with a greedy one.",
+    "abstract": [
+      "Micro-grids such as college campuses with sustainable energy sources and non-renewable mixtures present an optimization opportunity for cost-saving, sustainability efforts and energy conservation.",
+      "By using the demand, generation, and storage data from these micro-grids we demonstrate that we can design a Markov-Decision-Process-based control system that can take real-time data for each grid and find the optimal allocation of resources to reduce non-renewable usage and buying energy from larger energy providers while also maximizing meeting demand constraints. We find that by using deep Q-learning with a discrete action space, our learned policy can save university campuses upwards of $50,000 over greedy policies."
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "/documents/papers/microgrid-deep-q-learning.pdf"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/aakamishra/mdp-energy-grid-optimization"
+      }
+    ],
+    "bib": {
+      "type": "techreport",
+      "key": "abukhadra2024keeping",
+      "institution": "Stanford University"
+    }
+  },
+  {
+    "slug": "urdf-language-reasoning",
+    "title": "Towards Natural Language Reasoning for Unified Robotics Description Format Files",
+    "date": "2024-03-01",
+    "venue": "Stanford University",
+    "authors": [
+      "Neil Nie",
+      "Austin Patel",
+      "Aakash Mishra"
+    ],
+    "tags": [
+      "control"
+    ],
+    "media": {
+      "src": "/images/papers/urdf.webp",
+      "alt": "Pipeline: URDF files are rendered, captioned by a vision-language model, and turned into question-answer pairs for fine-tuning",
+      "fit": "contain"
+    },
+    "summary": "Teaches a language model to answer questions about robot description files, using renders captioned by a vision-language model as training data. Joint-counting accuracy rises from 6% to 50%.",
+    "abstract": [
+      "We develop a language model that is capable of semantic reasoning with Universal Robot Description Format (URDF) files. These files describe the geometry and articulation of 3D objects. Leveraging the SAPIEN dataset of household items, we develop a model that can interpret URDF files alongside natural language queries to answer questions about object articulation, dynamics, and appearance.",
+      "Our approach involves generating image renders of URDF objects, obtaining natural language captions via a VLM, and then creating question-answer pairs for model training. We experiment with fine-tuning pre-trained large language models with different datasets while also exploring the synergy between textual and geometric data representations. We demonstrate quantitative and qualitative results showing the improvement of our fine-tuned model on both a general Q&A dataset and a joint counting task that highlights the model's ability to reason with URDFs."
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "/documents/papers/urdf-language-reasoning.pdf"
+      }
+    ],
+    "bib": {
+      "type": "techreport",
+      "key": "nie2024urdf",
+      "institution": "Stanford University"
+    }
+  },
+  {
+    "slug": "hardware-fault-correction",
+    "title": "Adaptive Controls for Hardware Fault-Correction in Embedded Systems",
+    "date": "2023-12-01",
+    "venue": "Stanford University",
+    "authors": [
+      "Aakash Mishra",
+      "Dea Dressel"
+    ],
+    "tags": [
+      "control"
+    ],
+    "media": {
+      "src": "/images/papers/fault-correction.webp",
+      "alt": "Fault detection from firmware parse trees with a graph network, feeding an RL agent that adapts the robot's controls",
+      "fit": "contain"
+    },
+    "summary": "A robot that diagnoses and works around its own hardware faults. A graph network reads firmware to spot a failing motor, and an RL agent reroutes power to keep the robot on track.",
+    "abstract": [
+      "Embedded system fault detection is a multi-modal problem that can be difficult to solve, especially for real-time detection and correction on remotely deployed systems. Standard ways of assessing a bug on a deployed system are subject to temporal and physical constraints, and it can be hard to tell whether sensor input is reliable or whether a motor is behaving nominally.",
+      "We propose an autonomous method with three new pieces. First, a new intermediate representation for embedded firmware called a Hardware Highlight Parse Tree (HHPT). Second, a GNN-based detector that finds anomalous hardware behavior. Third, a reinforcement-learning system that adaptively controls its hardware in response to those anomalies, combined with the GNN detector. We show that it is possible to build a robust, adaptive system that can self-diagnose and correct hardware issues that would otherwise be hard to recover from."
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "/documents/papers/hardware-fault-correction.pdf"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/aakamishra/embedded-repair-mp"
+      }
+    ],
+    "bib": {
+      "type": "techreport",
+      "key": "mishra2023adaptive",
+      "institution": "Stanford University"
+    }
+  },
+  {
+    "slug": "multi-fidelity-scheduling",
+    "title": "Rapid and Low-Cost Evaluation of Multi-fidelity Scheduling Algorithms for Hyperparameter Optimization",
+    "date": "2023-11-01",
+    "venue": "IDEAL 2023 (LNCS)",
+    "authors": [
+      "Aakash Mishra",
+      "Jeremy Hsu",
+      "Frank D'Agostino",
+      "Utku Sirin",
+      "Stratos Idreos"
+    ],
+    "tags": [
+      "systems"
+    ],
+    "stat": {
+      "value": "pip install phoss",
+      "label": "open-source simulator for hyperparameter search"
+    },
+    "summary": "PHOSS simulates training-loss landscapes so multi-fidelity hyperparameter schedulers can be compared quickly and cheaply, without training real models.",
+    "abstract": [
+      "Comparing multi-fidelity schedulers for hyperparameter optimization normally means training many real models, which is slow and expensive. We introduce PHOSS, an open-source Python platform that generates synthetic loss landscapes from a chosen distribution and workload, runs distributed hyperparameter searches over them with Ray Tune, and reports regret and loss curves across seeds. This makes it fast and low-cost to compare schedulers across many configurations."
+    ],
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1007/978-3-031-48232-8_7"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/aakamishra/phoss"
+      },
+      {
+        "label": "PyPI",
+        "url": "https://pypi.org/project/phoss/"
+      }
+    ],
+    "bib": {
+      "type": "inproceedings",
+      "key": "mishra2023rapid",
+      "booktitle": "Intelligent Data Engineering and Automated Learning (IDEAL 2023)",
+      "pages": "64--69",
+      "publisher": "Springer",
+      "doi": "10.1007/978-3-031-48232-8_7"
+    },
+    "abstract_label": "Overview"
+  },
+  {
+    "slug": "nas-assistant-thesis",
+    "title": "Improving Neural Networks with Generalizable Performance Predictors and Generative Code Language Models",
+    "date": "2023-05-01",
+    "venue": "Harvard University, undergraduate thesis",
+    "authors": [
+      "Aakash Mishra"
+    ],
+    "advisor": "Stratos Idreos",
+    "tags": [
+      "systems"
+    ],
+    "media": {
+      "src": "/images/papers/thesis.webp",
+      "alt": "NAS-Assistant workflow: a model and its data pass through a performance predictor and layer ranking to a generative code model that writes a new model",
+      "fit": "contain"
+    },
+    "summary": "NAS-Assistant predicts how well any network will perform, ranks which layers matter, and uses a code language model to write better architectures.",
+    "abstract": [
+      "Neural Architecture Search (NAS) is a growing field with many evolving facets, from evaluation strategies and search-space criteria to architecture optimization and performance prediction. These spaces are currently disjoint and constrained by a lack of generalizability: structured search spaces restrict algorithms to specific architectures, while performance estimators are fixed to given benchmarks without the ability to conduct zero-shot evaluation.",
+      "Using advances in generative AI, we present a combination of these methods in a tool called NAS-Assistant. It consists of a new generalizable GNN-based neural architecture encoder and a clustering, attention-based regression network that predicts model performance with high accuracy and transferability. We also propose a method for evaluating the contribution of each layer of a network, combined with zero-cost NAS evaluation. Lastly, we develop a framework for using generative code language models to explore any model search space requested from NAS-Assistant. This thesis aims to demonstrate the first integrated generative AI optimizer for Neural Architecture Search."
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "/documents/thesis.pdf"
+      }
+    ],
+    "bib": {
+      "type": "thesis",
+      "key": "mishra2023generalizable",
+      "school": "Harvard University",
+      "note": "Undergraduate thesis, advised by Stratos Idreos"
+    }
+  },
+  {
+    "slug": "zero-shot-cxr",
+    "title": "Improving Zero-Shot Detection of Low Prevalence Chest Pathologies using Domain Pre-trained Language Models",
+    "date": "2023-04-01",
+    "venue": "MIDL 2023, short paper",
+    "authors": [
+      "Aakash Mishra",
+      "Rajat Mittal",
+      "Christy Jestin",
+      "Kostas Tingos",
+      "Pranav Rajpurkar"
+    ],
+    "tags": [
+      "medical"
+    ],
+    "featured": true,
+    "media": {
+      "src": "/images/papers/zero-shot-cxr.webp",
+      "alt": "An image tower paired with a BERT text tower whose weights come from transformers pre-trained on MIMIC-III and PubMed",
+      "fit": "contain"
+    },
+    "summary": "Swapping a CLIP model's text tower for one pre-trained on clinical text hurts on common chest findings but helps a lot on rare ones.",
+    "abstract": [
+      "Recent advances in zero-shot learning have enabled the use of paired image-text data to replace structured labels, removing the need for expert-annotated datasets. Models such as CLIP-based CheXzero use these advances for chest X-ray interpretation.",
+      "We hypothesize that domain pre-trained models such as CXR-BERT, BlueBERT, and ClinicalBERT can improve CLIP-like models with domain knowledge by replacing BERT weights, at the cost of breaking the original model's alignment. We evaluate zero-shot classification models with domain-specific pre-training for detecting low-prevalence pathologies. Even though replacing the weights of the original CLIP-BERT degrades performance on common pathologies, pre-trained text towers perform much better on low-prevalence diseases. This motivates future ensembles that combine differently trained language models."
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2306.08000"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/aakamishra/zero-shot-low-prevalence-CXR-detection"
+      }
+    ],
+    "bib": {
+      "type": "inproceedings",
+      "key": "mishra2023improving",
+      "booktitle": "Medical Imaging with Deep Learning, short paper track",
+      "eprint": "2306.08000"
+    }
+  },
+  {
+    "slug": "active-centaurs-photometry",
+    "title": "Photometry of Active Centaurs: Colors of Dormant Active Centaur Nuclei",
+    "date": "2019-05-01",
+    "venue": "The Astronomical Journal",
+    "authors": [
+      "Ian Wong",
+      "Aakash Mishra",
+      "Michael E. Brown"
+    ],
+    "tags": [
+      "science"
+    ],
+    "media": {
+      "src": "/images/papers/centaurs.webp",
+      "alt": "Surface brightness profiles of two active Centaurs with their telescope images inset",
+      "fit": "contain"
+    },
+    "summary": "Multiband photometry of nine Centaurs, the small bodies between Jupiter and Neptune. Includes the first color measurements of two bare nuclei and mass-loss estimates for two active ones.",
+    "abstract": [
+      "We present multiband photometric observations of nine Centaurs. Five of the targets are known active Centaurs (167P/CINEOS, 174P/Echeclus, P/2008 CL94, P/2011 S1, and C/2012 Q1), and the other four are inactive Centaurs belonging to the redder of the two known color subpopulations (83982 Crantor, 121725 Aphidas, 250112 2002 KY14, and 281371 2008 FC76).",
+      "We measure the optical colors of eight targets and search for cometary activity. Three of the five active Centaurs showed no signs of activity at the time of observation, yielding the first published color measurements of the bare nuclei of 167P and P/2008 CL94 without possible coma contamination. Activity was detected on P/2011 S1 and C/2012 Q1, yielding relatively high estimated mass-loss rates of 140 ± 20 and 250 ± 40 kg/s, respectively.",
+      "We suggest that the relative paucity of red Centaurs with low-perihelion orbits may not be directly due to blanketing of the surface by unweathered particulates, but could instead be a result of higher levels of thermal processing on low-perihelion Centaurs in general."
+    ],
+    "links": [
+      {
+        "label": "Journal",
+        "url": "https://iopscience.iop.org/article/10.3847/1538-3881/ab1b22"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1904.09255"
+      }
+    ],
+    "bib": {
+      "type": "article",
+      "key": "wong2019photometry",
+      "journal": "The Astronomical Journal",
+      "volume": "157",
+      "number": "6",
+      "pages": "225",
+      "doi": "10.3847/1538-3881/ab1b22"
+    }
+  },
+  {
+    "slug": "plant-drought-tolerance",
+    "title": "Plant Responses and Tolerance to Drought",
+    "date": "2019-01-01",
+    "venue": "CRC Press, book chapter",
+    "authors": [
+      "Sumit Jangra",
+      "Aakash Mishra",
+      "Disha Kamboj",
+      "Neelam R. Yadav",
+      "Ram C. Yadav"
+    ],
+    "tags": [
+      "science"
+    ],
+    "stat": {
+      "value": "Drought",
+      "label": "chapter in Approaches for Enhancing Abiotic Stress Tolerance in Plants"
+    },
+    "summary": "A review of how plants respond to drought and the approaches used to make crops more drought-tolerant.",
+    "abstract": [
+      "Book chapter in Approaches for Enhancing Abiotic Stress Tolerance in Plants (CRC Press, 2019), pages 79 to 98. It reviews plant responses to drought stress and the approaches used to improve drought tolerance."
+    ],
+    "links": [
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lEM7C0gAAAAJ&citation_for_view=lEM7C0gAAAAJ:9yKSN-GCB0IC"
+      }
+    ],
+    "bib": {
+      "type": "incollection",
+      "key": "jangra2019plant",
+      "booktitle": "Approaches for Enhancing Abiotic Stress Tolerance in Plants",
+      "pages": "79--98",
+      "publisher": "CRC Press"
+    },
+    "abstract_label": "Overview"
+  },
+  {
+    "slug": "abiotic-stress-climate",
+    "title": "Engineering Abiotic Stress Tolerance Traits for Mitigating Climate Change",
+    "date": "2017-01-01",
+    "venue": "Springer, book chapter",
+    "authors": [
+      "Sumit Jangra",
+      "Aakash Mishra",
+      "Disha Kamboj",
+      "Neelam R. Yadav",
+      "Ram C. Yadav"
+    ],
+    "tags": [
+      "science"
+    ],
+    "stat": {
+      "value": "Climate",
+      "label": "chapter in Plant Biotechnology: Recent Advancements and Developments"
+    },
+    "summary": "A review of engineering abiotic stress tolerance in crops to offset the effects of climate change.",
+    "abstract": [
+      "Book chapter in Plant Biotechnology: Recent Advancements and Developments (Springer, 2017), pages 59 to 73. It reviews approaches to engineering abiotic stress tolerance traits in plants as a way to mitigate the effects of climate change on crops."
+    ],
+    "links": [
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lEM7C0gAAAAJ&citation_for_view=lEM7C0gAAAAJ:d1gkVwhDpl0C"
+      }
+    ],
+    "bib": {
+      "type": "incollection",
+      "key": "jangra2017engineering",
+      "booktitle": "Plant Biotechnology: Recent Advancements and Developments",
+      "pages": "59--73",
+      "publisher": "Springer"
+    },
+    "abstract_label": "Overview"
+  }
+]

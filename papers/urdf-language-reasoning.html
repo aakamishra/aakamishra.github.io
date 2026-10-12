@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Towards Natural Language Reasoning for Unified Robotics Description Format Files · Aakash Mishra</title>
+<meta name="description" content="Teaches a language model to answer questions about robot description files, using renders captioned by a vision-language model as training data. Joint-counting accuracy rises from 6% to 50%.">
+<meta property="og:title" content="Towards Natural Language Reasoning for Unified Robotics Description Format Files · Aakash Mishra">
+<meta property="og:description" content="Teaches a language model to answer questions about robot description files, using renders captioned by a vision-language model as training data. Joint-counting accuracy rises from 6% to 50%.">
+<meta property="og:image" content="https://aakamishra.github.io/images/papers/urdf.webp">
+<meta property="og:url" content="https://aakamishra.github.io/papers/urdf-language-reasoning.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="/"><i></i>Aakash Mishra</a>
+<ul><li><a href="/research.html" aria-current="page">Research</a></li><li><a href="/experience.html">Experience</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/hobbies.html">Hobbies</a></li></ul>
+</div></nav>
+<main>
+
+<header class="paper-hero wrap">
+<div class="crumb"><a href="/research.html">Research</a> / Stanford University</div>
+<h1>Towards Natural Language Reasoning for Unified Robotics Description Format Files</h1>
+
+<p class="authors">Neil Nie, Austin Patel, <b>Aakash Mishra</b></p>
+<p class="meta">Stanford University · Mar 2024</p>
+<div class="pills"><a href="/documents/papers/urdf-language-reasoning.pdf" class="main">PDF</a><a href="#cite">Cite</a></div>
+<figure class="figure">
+<div class="frame"><img src="/images/papers/urdf.webp" alt="Pipeline: URDF files are rendered, captioned by a vision-language model, and turned into question-answer pairs for fine-tuning" class="" loading="lazy"></div>
+<figcaption>Pipeline: URDF files are rendered, captioned by a vision-language model, and turned into question-answer pairs for fine-tuning</figcaption>
+</figure>
+</header>
+<section class="wrap paper-body">
+<div>
+<p class="tldr">Teaches a language model to answer questions about robot description files, using renders captioned by a vision-language model as training data. Joint-counting accuracy rises from 6% to 50%.</p>
+<h2>Abstract</h2>
+<div class="abstract"><p>We develop a language model that is capable of semantic reasoning with Universal Robot Description Format (URDF) files. These files describe the geometry and articulation of 3D objects. Leveraging the SAPIEN dataset of household items, we develop a model that can interpret URDF files alongside natural language queries to answer questions about object articulation, dynamics, and appearance.</p><p>Our approach involves generating image renders of URDF objects, obtaining natural language captions via a VLM, and then creating question-answer pairs for model training. We experiment with fine-tuning pre-trained large language models with different datasets while also exploring the synergy between textual and geometric data representations. We demonstrate quantitative and qualitative results showing the improvement of our fine-tuned model on both a general Q&amp;A dataset and a joint counting task that highlights the model&#x27;s ability to reason with URDFs.</p></div>
+<div class="bib" id="cite"><h2>Cite</h2>
+<pre id="bib-urdf-language-reasoning">@techreport{nie2024urdf,
+  title = {Towards Natural Language Reasoning for Unified Robotics Description Format Files},
+  author = {Neil Nie and Austin Patel and Aakash Mishra},
+  year = {2024},
+  institution = {Stanford University}
+}</pre>
+<button type="button" data-copy="bib-urdf-language-reasoning">Copy</button></div>
+</div>
+<aside class="side"><dl>
+<dt>Venue</dt><dd>Stanford University</dd>
+<dt>Date</dt><dd>Mar 2024</dd>
+<dt>Topic</dt><dd>Robotics & RL</dd>
+<dt>Authors</dt><dd>3</dd>
+</dl></aside>
+</section>
+<nav class="wrap next" aria-label="More research"><a href="/papers/semantic-caching-llm-scheduling.html"><span>← Newer</span>Optimizing Semantic Caching for Sequence Prediction and Memory-Optimized LLM Inference Scheduling</a><a class="r" href="/papers/hardware-fault-correction.html"><span>Older →</span>Adaptive Controls for Hardware Fault-Correction in Embedded Systems</a></nav>
+
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="mail link" href="mailto:aakamishra1@gmail.com">aakamishra1@gmail.com</a>
+<small>© 2026 Aakash Mishra</small></div>
+<div class="links"><a href="https://github.com/aakamishra" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aakash-mishra/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/aakamishra1" target="_blank" rel="noopener">X</a><a href="https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ" target="_blank" rel="noopener">Scholar</a><a href="https://www.instagram.com/aakamishra" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

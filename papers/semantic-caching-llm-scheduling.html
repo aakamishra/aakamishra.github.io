@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Optimizing Semantic Caching for Sequence Prediction and Memory-Optimized LLM Inference Scheduling · Aakash Mishra</title>
+<meta name="description" content="Predicts how long each LLM answer will be by reusing predictions for similar past prompts, then serves short jobs first in vLLM. 60% faster end-to-end.">
+<meta property="og:title" content="Optimizing Semantic Caching for Sequence Prediction and Memory-Optimized LLM Inference Scheduling · Aakash Mishra">
+<meta property="og:description" content="Predicts how long each LLM answer will be by reusing predictions for similar past prompts, then serves short jobs first in vLLM. 60% faster end-to-end.">
+<meta property="og:image" content="https://aakamishra.github.io/images/papers/semanticache.webp">
+<meta property="og:url" content="https://aakamishra.github.io/papers/semantic-caching-llm-scheduling.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="/"><i></i>Aakash Mishra</a>
+<ul><li><a href="/research.html" aria-current="page">Research</a></li><li><a href="/experience.html">Experience</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/hobbies.html">Hobbies</a></li></ul>
+</div></nav>
+<main>
+
+<header class="paper-hero wrap">
+<div class="crumb"><a href="/research.html">Research</a> / Stanford University</div>
+<h1>Optimizing Semantic Caching for Sequence Prediction and Memory-Optimized LLM Inference Scheduling</h1>
+
+<p class="authors"><b>Aakash Mishra</b></p>
+<p class="meta">Stanford University · Jun 2024</p>
+<div class="pills"><a href="/documents/papers/semantic-caching-llm-scheduling.pdf" class="main">PDF</a><a href="https://github.com/aakamishra/SemantiCache" target="_blank" rel="noopener">Code ↗</a><a href="#cite">Cite</a></div>
+<figure class="figure">
+<div class="frame"><img src="/images/papers/semanticache.webp" alt="Prompts flow through an encoder and semantic cache to a token-length predictor and a scheduler in front of the vLLM engine" class="" loading="lazy"></div>
+<figcaption>Prompts flow through an encoder and semantic cache to a token-length predictor and a scheduler in front of the vLLM engine</figcaption>
+</figure>
+</header>
+<section class="wrap paper-body">
+<div>
+<p class="tldr">Predicts how long each LLM answer will be by reusing predictions for similar past prompts, then serves short jobs first in vLLM. 60% faster end-to-end.</p>
+<h2>Abstract</h2>
+<div class="abstract"><p>The growing prevalence of LLMs has presented a need for scalable inference platforms. Proxy-modelling for output token length presents an opportunity to schedule inference jobs more effectively using shortest-job first. We show that this method can be further optimized by using a semantic cache that uses query similarity to cache the output token length of similar prompts.</p><p>We show that the accuracy of the proxy model can be boosted with semantic caching as well as a reduction in the regressor overhead. We integrate our approach with vLLM&#x27;s memory-optimized inference platform and show a 60% improvement in end-to-end vLLM inference time for the facebook/opt-125m model.</p></div>
+<div class="bib" id="cite"><h2>Cite</h2>
+<pre id="bib-semantic-caching-llm-scheduling">@techreport{mishra2024semantic,
+  title = {Optimizing Semantic Caching for Sequence Prediction and Memory-Optimized LLM Inference Scheduling},
+  author = {Aakash Mishra},
+  year = {2024},
+  institution = {Stanford University}
+}</pre>
+<button type="button" data-copy="bib-semantic-caching-llm-scheduling">Copy</button></div>
+</div>
+<aside class="side"><dl>
+<dt>Venue</dt><dd>Stanford University</dd>
+<dt>Date</dt><dd>Jun 2024</dd>
+<dt>Topic</dt><dd>Systems & optimization</dd>
+<dt>Authors</dt><dd>1</dd>
+</dl></aside>
+</section>
+<nav class="wrap next" aria-label="More research"><a href="/papers/microgrid-deep-q-learning.html"><span>← Newer</span>Keeping the Lights On for Campus: Deep Q-Learning and MDPs for Micro-Energy Grid Optimization</a><a class="r" href="/papers/urdf-language-reasoning.html"><span>Older →</span>Towards Natural Language Reasoning for Unified Robotics Description Format Files</a></nav>
+
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="mail link" href="mailto:aakamishra1@gmail.com">aakamishra1@gmail.com</a>
+<small>© 2026 Aakash Mishra</small></div>
+<div class="links"><a href="https://github.com/aakamishra" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aakash-mishra/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/aakamishra1" target="_blank" rel="noopener">X</a><a href="https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ" target="_blank" rel="noopener">Scholar</a><a href="https://www.instagram.com/aakamishra" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

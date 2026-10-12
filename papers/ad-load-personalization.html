@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Causal-Informed Hybrid Online Adaptive Optimization for Ad Load Personalization in Large-Scale Social Networks · Aakash Mishra</title>
+<meta name="description" content="Combines constraint-safe primal-dual control with trust-region Bayesian optimization, guided by a causal model, to personalize how many ads people see. Tested in live A/B tests on a billion-user social network.">
+<meta property="og:title" content="Causal-Informed Hybrid Online Adaptive Optimization for Ad Load Personalization in Large-Scale Social Networks · Aakash Mishra">
+<meta property="og:description" content="Combines constraint-safe primal-dual control with trust-region Bayesian optimization, guided by a causal model, to personalize how many ads people see. Tested in live A/B tests on a billion-user social network.">
+<meta property="og:image" content="https://aakamishra.github.io/images/papers/ad-load.webp">
+<meta property="og:url" content="https://aakamishra.github.io/papers/ad-load-personalization.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="/"><i></i>Aakash Mishra</a>
+<ul><li><a href="/research.html" aria-current="page">Research</a></li><li><a href="/experience.html">Experience</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/hobbies.html">Hobbies</a></li></ul>
+</div></nav>
+<main>
+
+<header class="paper-hero wrap">
+<div class="crumb"><a href="/research.html">Research</a> / NeurIPS 2025 Workshop on Constrained Optimization for ML</div>
+<h1>Causal-Informed Hybrid Online Adaptive Optimization for Ad Load Personalization in Large-Scale Social Networks</h1>
+
+<p class="authors"><b>Aakash Mishra</b>, Qi Xu, Zhigang Hua, Keyu Nie, Vishwanath Sangale, Vishal Vaingankar, Jizhe Zhang, Ren Mao</p>
+<p class="meta">NeurIPS 2025 Workshop on Constrained Optimization for ML · Dec 2025</p>
+<div class="pills"><a href="https://arxiv.org/abs/2602.10129" class="main" target="_blank" rel="noopener">arXiv ↗</a><a href="https://arxiv.org/pdf/2602.10129" target="_blank" rel="noopener">PDF ↗</a><a href="https://neurips.cc/virtual/2025/123291" target="_blank" rel="noopener">NeurIPS ↗</a><a href="https://nips.cc/media/neurips-2025/Slides/123291.pdf" target="_blank" rel="noopener">Slides ↗</a><a href="#cite">Cite</a></div>
+<figure class="figure">
+<div class="frame"><img src="/images/papers/ad-load.webp" alt="System diagram: an upstream causal model informs an online adaptive tuning engine that sets ad load under constraints" class="" loading="lazy"></div>
+<figcaption>System diagram: an upstream causal model informs an online adaptive tuning engine that sets ad load under constraints</figcaption>
+</figure>
+</header>
+<section class="wrap paper-body">
+<div>
+<p class="tldr">Combines constraint-safe primal-dual control with trust-region Bayesian optimization, guided by a causal model, to personalize how many ads people see. Tested in live A/B tests on a billion-user social network.</p>
+<h2>Abstract</h2>
+<div class="abstract"><p>Personalizing ad load in large-scale social networks requires balancing user experience and conversions under operational constraints. Traditional primal-dual methods enforce constraints reliably but adapt slowly in dynamic environments, while Bayesian Optimization (BO) enables exploration but suffers from slow convergence.</p><p>We propose a hybrid online adaptive optimization framework, CTRCBO (Cohort-Based Trust Region Contextual Bayesian Optimization), combining primal-dual with BO, enhanced by trust-region updates and Gaussian Process Regression (GPR) surrogates for both objectives and constraints. Our approach leverages an upstream causal ML model to inform the surrogate, improving decision quality and enabling efficient exploration-exploitation and online tuning.</p><p>We evaluate our method on a billion-user social network, demonstrating faster convergence, robust constraint satisfaction, and improved personalization metrics, including real-world online A/B test results.</p></div>
+<div class="bib" id="cite"><h2>Cite</h2>
+<pre id="bib-ad-load-personalization">@inproceedings{mishra2025causal,
+  title = {Causal-Informed Hybrid Online Adaptive Optimization for Ad Load Personalization in Large-Scale Social Networks},
+  author = {Aakash Mishra and Qi Xu and Zhigang Hua and Keyu Nie and Vishwanath Sangale and Vishal Vaingankar and Jizhe Zhang and Ren Mao},
+  year = {2025},
+  booktitle = {NeurIPS 2025 Workshop on Constrained Optimization for Machine Learning},
+  eprint = {2602.10129},
+  archivePrefix = {arXiv}
+}</pre>
+<button type="button" data-copy="bib-ad-load-personalization">Copy</button></div>
+</div>
+<aside class="side"><dl>
+<dt>Venue</dt><dd>NeurIPS 2025 Workshop on Constrained Optimization for ML</dd>
+<dt>Date</dt><dd>Dec 2025</dd>
+<dt>Topic</dt><dd>Systems & optimization</dd>
+<dt>Authors</dt><dd>8</dd>
+</dl></aside>
+</section>
+<nav class="wrap next" aria-label="More research"><a href="/papers/auditing-model-attention.html"><span>← Newer</span>Auditing Our Models for Visual Explainability</a><a class="r" href="/papers/llm-cardiology-evaluation.html"><span>Older →</span>Unmasking True Clinical Competence: The Importance of Adaptive and Open-Ended Evaluation for Large Language Models in Cardiology</a></nav>
+
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="mail link" href="mailto:aakamishra1@gmail.com">aakamishra1@gmail.com</a>
+<small>© 2026 Aakash Mishra</small></div>
+<div class="links"><a href="https://github.com/aakamishra" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aakash-mishra/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/aakamishra1" target="_blank" rel="noopener">X</a><a href="https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ" target="_blank" rel="noopener">Scholar</a><a href="https://www.instagram.com/aakamishra" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

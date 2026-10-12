@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Going Beyond ImageNet Preprocessing for X-ray Vision Models · Aakash Mishra</title>
+<meta name="description" content="X-rays are not natural images, so their preprocessing shouldn&#x27;t be borrowed from ImageNet. We measure what makes CR images different, build a pipeline for them, and ablate each design choice.">
+<meta property="og:title" content="Going Beyond ImageNet Preprocessing for X-ray Vision Models · Aakash Mishra">
+<meta property="og:description" content="X-rays are not natural images, so their preprocessing shouldn&#x27;t be borrowed from ImageNet. We measure what makes CR images different, build a pipeline for them, and ablate each design choice.">
+<meta property="og:image" content="https://aakamishra.github.io/images/epsilon/preprocessing.gif">
+<meta property="og:url" content="https://aakamishra.github.io/papers/cr-image-preprocessing.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/images/icons/apple-icon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="/"><i></i>Aakash Mishra</a>
+<ul><li><a href="/research.html" aria-current="page">Research</a></li><li><a href="/experience.html">Experience</a></li><li><a href="/projects.html">Projects</a></li><li><a href="/hobbies.html">Hobbies</a></li></ul>
+</div></nav>
+<main>
+
+<header class="paper-hero wrap">
+<div class="crumb"><a href="/research.html">Research</a> / Epsilon Health Research</div>
+<h1>Going Beyond ImageNet Preprocessing for X-ray Vision Models</h1>
+<p class="subtitle">Building a CR image preprocessor from the ground up</p>
+<p class="authors">Arjun Karpur, <b>Aakash Mishra</b></p>
+<p class="meta">Epsilon Health Research · Aug 19, 2026</p>
+<div class="pills"><a href="https://www.epsilon.health/research/cr-image-preprocessing" class="main" target="_blank" rel="noopener">Read the post ↗</a><a href="#cite">Cite</a></div>
+<figure class="figure">
+<div class="frame dark"><img src="/images/epsilon/preprocessing.gif" alt="A foot radiograph passing through Epsilon&#x27;s CR preprocessing pipeline" class="cover" loading="lazy"></div>
+<figcaption>A foot radiograph passing through Epsilon&#x27;s CR preprocessing pipeline</figcaption>
+</figure>
+</header>
+<section class="wrap paper-body">
+<div>
+<p class="tldr">X-rays are not natural images, so their preprocessing shouldn&#x27;t be borrowed from ImageNet. We measure what makes CR images different, build a pipeline for them, and ablate each design choice.</p>
+<h2>Abstract</h2>
+<div class="abstract"><p>Most vision models for radiology are fed by a preprocessing pipeline inherited from natural images: normalize the pixels, crop or squeeze the frame into a fixed square, and hand it to the backbone. X-ray images are not natural images, however, and the preprocessing pipeline should reflect this. In this post, we identify and measure a handful of image characteristics specific to CR (computed radiography) and propose our CR image preprocessing pipeline. We run a series of ablation experiments to study the sensitivity of pathology classification models to the image preprocessor&#x27;s design decisions.</p></div>
+<div class="bib" id="cite"><h2>Cite</h2>
+<pre id="bib-cr-image-preprocessing">@misc{karpur2026beyond,
+  title = {Going Beyond ImageNet Preprocessing for X-ray Vision Models},
+  author = {Arjun Karpur and Aakash Mishra},
+  year = {2026},
+  howpublished = {Epsilon Health Research},
+  url = {https://www.epsilon.health/research/cr-image-preprocessing}
+}</pre>
+<button type="button" data-copy="bib-cr-image-preprocessing">Copy</button></div>
+</div>
+<aside class="side"><dl>
+<dt>Venue</dt><dd>Epsilon Health Research</dd>
+<dt>Date</dt><dd>Aug 19, 2026</dd>
+<dt>Topic</dt><dd>Medical AI</dd>
+<dt>Authors</dt><dd>2</dd>
+</dl></aside>
+</section>
+<nav class="wrap next" aria-label="More research"><div></div><a class="r" href="/papers/auditing-model-attention.html"><span>Older →</span>Auditing Our Models for Visual Explainability</a></nav>
+
+</main>
+<footer class="site"><div class="wrap">
+<div><a class="mail link" href="mailto:aakamishra1@gmail.com">aakamishra1@gmail.com</a>
+<small>© 2026 Aakash Mishra</small></div>
+<div class="links"><a href="https://github.com/aakamishra" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/aakash-mishra/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/aakamishra1" target="_blank" rel="noopener">X</a><a href="https://scholar.google.com/citations?hl=en&user=lEM7C0gAAAAJ" target="_blank" rel="noopener">Scholar</a><a href="https://www.instagram.com/aakamishra" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>
