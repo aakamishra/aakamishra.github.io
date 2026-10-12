@@ -38,8 +38,7 @@ THREE = (
 )
 FONTS = (
     "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600"
-    "&family=Geist+Mono:wght@400;500"
-    "&family=Instrument+Serif:ital@0;1&display=swap"
+    "&family=Geist+Mono:wght@400;500&display=swap"
 )
 
 site = json.loads((ROOT / "data/site.json").read_text())
@@ -187,7 +186,8 @@ def build_home() -> None:
     chips = "".join(f"<span>{escape(i)}</span>" for i in site["interests"])
     selected = "".join(row(by_slug[s]) for s in SELECTED)
     jobs = "".join(
-        f'<li>{escape(j["org"])}, {escape(j["role"])}'
+        f'<li><span class="who"><img class="logo sm" src="{j["logo"]}" alt="">'
+        f'{escape(j["org"])}, {escape(j["role"])}</span>'
         f'<span>{escape(j["when"])}</span></li>'
         for j in site["work"][:3]
     )
@@ -208,8 +208,7 @@ def build_home() -> None:
 <canvas class="scene" aria-hidden="true"></canvas>
 <div class="wrap">
 <div>
-<span class="eyebrow" style="color:var(--night-muted)">San Francisco · Medical AI</span>
-<h1 style="margin-top:18px">{ME}<br><span class="serif">I train models that help radiologists read X-rays.</span></h1>
+<h1>{ME}</h1>
 <p class="lede">{escape(site["bio"])}</p>
 <div class="chips">{chips}</div>
 <div class="cta">
@@ -219,7 +218,6 @@ def build_home() -> None:
 </div>
 <div class="portrait"><div class="card">
 <img src="/images/me/profile.jpg" alt="Aakash smiling at a counter with a mug of hot chocolate">
-<span class="tag">{escape(eps["role"])}<br>Epsilon Health</span>
 </div></div>
 </div>
 </header>
@@ -367,7 +365,8 @@ def build_experience() -> None:
         where = f'<small>{escape(j["where"])}</small>' if j.get("where") else ""
         jobs.append(f"""<div class="job">
 <div class="when">{escape(j["when"])}{where}</div>
-<div><h3>{org}</h3><div class="role">{escape(j["role"])}</div>
+<div><div class="job-head"><img class="logo" src="{j["logo"]}" alt="{escape(j["org"])} logo">
+<div><h3>{org}</h3><div class="role">{escape(j["role"])}</div></div></div>
 <ul>{pts}</ul>
 {f'<div class="papers">{links}</div>' if links else ""}</div>
 </div>""")
@@ -401,7 +400,7 @@ def build_projects() -> None:
 <h1>Projects</h1>
 <p>Open-source tools, systems and competition work. For papers and reports, see <a class="link" href="/research.html">Research</a>.</p>
 </header>
-<section class="wrap grid3">{"".join(cards)}</section>"""
+<section class="wrap grid2">{"".join(cards)}</section>"""
     page("projects.html", "Projects",
          "Open-source projects by Aakash Mishra.", body, "projects")
 
@@ -432,7 +431,7 @@ def build_hobbies() -> None:
     body = f"""
 <header class="page-head wrap">
 <span class="eyebrow">Hobbies</span>
-<h1>Astrophotography, surfing, photography</h1>
+<h1>Astrophotography and surfing</h1>
 <p>Seven photos of the night sky, then the two things I do in daylight.</p>
 </header>
 

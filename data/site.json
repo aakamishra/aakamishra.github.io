@@ -52,7 +52,8 @@
       "papers": [
         "auditing-model-attention",
         "cr-image-preprocessing"
-      ]
+      ],
+      "logo": "/images/logos/epsilon.svg"
     },
     {
       "org": "Meta",
@@ -65,7 +66,8 @@
       ],
       "papers": [
         "ad-load-personalization"
-      ]
+      ],
+      "logo": "/images/meta_icon.png"
     },
     {
       "org": "Solesca",
@@ -74,7 +76,8 @@
       "points": [
         "Trained a sentiment model to predict community response to proposed solar projects, fed by a pipeline that scraped town-hall notes and news.",
         "Fine-tuned GPT-2 to summarize renewable-energy articles, and built a geospatial graph network to predict a project's effect on incident light."
-      ]
+      ],
+      "logo": "/images/solesca_icon.png"
     },
     {
       "org": "Meta",
@@ -83,7 +86,8 @@
       "points": [
         "Designed a framework that detects user-identifying information in ML training data, and automated privacy checks for model deployment.",
         "Integrated a feature-engineering framework into the serving platform. Earned a return offer."
-      ]
+      ],
+      "logo": "/images/meta_icon.png"
     },
     {
       "org": "REX Real Estate",
@@ -92,7 +96,8 @@
       "points": [
         "Built AWS EMR and S3 data infrastructure with Terraform, plus Ranger access control for Hive.",
         "Wrote Airflow pipelines that moved terabytes of data to Salesforce through Kafka."
-      ]
+      ],
+      "logo": "/images/rex_icon.png"
     },
     {
       "org": "MIT IS&T",
@@ -101,7 +106,8 @@
       "points": [
         "Built a Django REST API for DHCP and ARP network data, and a 3D view of over 10,000 intrusion alerts an hour.",
         "Wrote parsers that organized more than 30 TB of security data."
-      ]
+      ],
+      "logo": "/images/mit_icon.png"
     }
   ],
   "education": [
