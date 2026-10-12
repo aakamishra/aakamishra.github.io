@@ -199,6 +199,7 @@ def build_home() -> None:
     )
     body = f"""
 <header class="hero">
+<canvas class="scene" aria-hidden="true"></canvas>
 <div class="wrap">
 <div>
 <h1>{ME}</h1>
@@ -242,7 +243,8 @@ def build_home() -> None:
 </div>
 </section>
 """
-    page("index.html", "", site["bio"], body)
+    page("index.html", "", site["bio"], body, scripts=(
+        f'{THREE}<script type="module" src="/assets/galaxy.js"></script>'))
 
 
 def build_research() -> None:
