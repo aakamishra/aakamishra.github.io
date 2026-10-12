@@ -32,9 +32,7 @@ if (card && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   box.addEventListener("pointermove", (e) => {
     const r = box.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-    card.style.transform = `rotateY(${(x - 0.5) * 14}deg) rotateX(${(0.5 - y) * 14}deg)`;
-    card.style.setProperty("--gx", `${x * 100}%`);
-    card.style.setProperty("--gy", `${y * 100}%`);
+    card.style.transform = `rotateY(${(x - 0.5) * 8}deg) rotateX(${(0.5 - y) * 8}deg)`;
   });
   box.addEventListener("pointerleave", () => (card.style.transform = ""));
 }

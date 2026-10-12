@@ -170,7 +170,7 @@ def paper_card(p: dict) -> str:
 <span class="meta">{fmt_date(p["date"])} · {escape(p["venue"])}</span>
 <h4>{escape(p["title"])}</h4>
 <span class="sub">{escape(p.get("subtitle", p["summary"]))}</span>
-<span class="go">Read the preview →</span>
+<span class="go">Abstract, figure, BibTeX →</span>
 </div></a>"""
 
 
@@ -209,12 +209,12 @@ def build_home() -> None:
 <div class="wrap">
 <div>
 <span class="eyebrow" style="color:var(--night-muted)">San Francisco · Medical AI</span>
-<h1 style="margin-top:18px">{ME}<br><span class="serif">building AI for radiology.</span></h1>
+<h1 style="margin-top:18px">{ME}<br><span class="serif">I train models that help radiologists read X-rays.</span></h1>
 <p class="lede">{escape(site["bio"])}</p>
 <div class="chips">{chips}</div>
 <div class="cta">
-<a class="btn primary" href="/research.html">See the research</a>
-<a class="btn ghost" href="#epsilon">Epsilon whitepapers</a>
+<a class="btn primary" href="/research.html">Research</a>
+<a class="btn ghost" href="#epsilon">Epsilon papers ↓</a>
 </div>
 </div>
 <div class="portrait"><div class="card">
@@ -247,7 +247,7 @@ def build_home() -> None:
 <section class="block wrap" id="education">
 <div class="block-head">
 <div><span class="eyebrow">Background</span><h2>Education, work and honors</h2></div>
-<a class="more" href="/experience.html">Full experience →</a>
+<a class="more" href="/experience.html">All roles →</a>
 </div>
 <div class="two">
 <div class="panel"><div class="edu">{edu}</div></div>
@@ -286,14 +286,14 @@ def build_research() -> None:
 <header class="page-head wrap">
 <span class="eyebrow">Research</span>
 <h1>Research</h1>
-<p>Papers, whitepapers and reports on medical imaging, ML systems, robotics and astronomy. Each one has a preview page with the figure, abstract and citation.</p>
+<p>{len(papers)} papers, posts and reports, newest first. Each has its own page with the abstract, the main figure and a BibTeX entry.</p>
 </header>
 <section class="wrap">
 <div class="filters" role="group" aria-label="Filter by topic">{btns}</div>
 <div class="pubs">{"".join(items)}</div>
 </section>"""
     page("research.html", "Research",
-         "Papers, whitepapers and reports by Aakash Mishra.", body, "research")
+         "Papers, posts and reports by Aakash Mishra.", body, "research")
 
 
 def build_papers() -> None:
@@ -375,7 +375,7 @@ def build_experience() -> None:
 <header class="page-head wrap">
 <span class="eyebrow">Experience</span>
 <h1>Experience</h1>
-<p>From security engineering and data infrastructure to ads ranking at Meta and medical imaging at Epsilon.</p>
+<p>Six roles since 2020, from network security at MIT to medical imaging at Epsilon.</p>
 </header>
 <section class="wrap timeline">{"".join(jobs)}</section>"""
     page("experience.html", "Experience",
@@ -432,8 +432,8 @@ def build_hobbies() -> None:
     body = f"""
 <header class="page-head wrap">
 <span class="eyebrow">Hobbies</span>
-<h1>After dark, and by the water</h1>
-<p>Astrophotography since high school, plus surfing and landscape photography.</p>
+<h1>Astrophotography, surfing, photography</h1>
+<p>Seven photos of the night sky, then the two things I do in daylight.</p>
 </header>
 
 <section class="wrap">
