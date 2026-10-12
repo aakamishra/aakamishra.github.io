@@ -38,7 +38,7 @@ THREE = (
 )
 FONTS = (
     "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600"
-    "&family=Geist+Mono:wght@400;500&display=swap"
+    "&display=swap"
 )
 
 site = json.loads((ROOT / "data/site.json").read_text())
@@ -65,9 +65,7 @@ def authors(names: list[str]) -> str:
 def media(p: dict, img_class: str = "") -> str:
     m = p.get("media")
     if not m:
-        s = p["stat"]
-        return (f'<div class="stat"><b>{escape(s["value"])}</b>'
-                f'<span>{escape(s["label"])}</span></div>')
+        return ""
     cls = "cover" if m.get("fit") == "cover" else img_class
     return (f'<img src="{m["src"]}" alt="{escape(m["alt"])}" '
             f'class="{cls}" loading="lazy">')
@@ -77,15 +75,13 @@ def is_dark(p: dict) -> bool:
     return p.get("media", {}).get("src", "").endswith(".gif")
 
 
-def link_pills(links: list[dict], main_first: bool = True) -> str:
+def link_pills(links: list[dict]) -> str:
     out = []
-    for i, ln in enumerate(links):
-        cls = ' class="main"' if main_first and i == 0 else ""
+    for ln in links:
         ext = ln["url"].startswith("http")
         tgt = ' target="_blank" rel="noopener"' if ext else ""
-        arrow = " ↗" if ext else ""
-        out.append(f'<a href="{escape(ln["url"])}"{cls}{tgt}>'
-                   f'{escape(ln["label"])}{arrow}</a>')
+        out.append(f'<a href="{escape(ln["url"])}"{tgt}>'
+                   f'{escape(ln["label"])}</a>')
     return "".join(out)
 
 
@@ -169,7 +165,6 @@ def paper_card(p: dict) -> str:
 <span class="meta">{fmt_date(p["date"])} · {escape(p["venue"])}</span>
 <h4>{escape(p["title"])}</h4>
 <span class="sub">{escape(p.get("subtitle", p["summary"]))}</span>
-<span class="go">Abstract, figure, BibTeX →</span>
 </div></a>"""
 
 
@@ -183,7 +178,6 @@ def row(p: dict) -> str:
 def build_home() -> None:
     eps = site["epsilon"]
     eps_cards = "".join(paper_card(p) for p in papers if p.get("epsilon"))
-    chips = "".join(f"<span>{escape(i)}</span>" for i in site["interests"])
     selected = "".join(row(by_slug[s]) for s in SELECTED)
     jobs = "".join(
         f'<li><span class="who"><img class="logo sm" src="{j["logo"]}" alt="">'
@@ -205,16 +199,10 @@ def build_home() -> None:
     )
     body = f"""
 <header class="hero">
-<canvas class="scene" aria-hidden="true"></canvas>
 <div class="wrap">
 <div>
 <h1>{ME}</h1>
 <p class="lede">{escape(site["bio"])}</p>
-<div class="chips">{chips}</div>
-<div class="cta">
-<a class="btn primary" href="/research.html">Research</a>
-<a class="btn ghost" href="#epsilon">Epsilon papers ↓</a>
-</div>
 </div>
 <div class="portrait"><div class="card">
 <img src="/images/me/profile.jpg" alt="Aakash smiling at a counter with a mug of hot chocolate">
@@ -225,8 +213,7 @@ def build_home() -> None:
 <section class="block wrap" id="epsilon">
 <div class="eps">
 <div class="top">
-<div><span class="eyebrow">Now</span>
-<h3>Epsilon Health</h3>
+<div><h3>Epsilon Health</h3>
 <p>{escape(eps["blurb"])}</p></div>
 </div>
 <div class="eps-cards">{eps_cards}</div>
@@ -235,16 +222,16 @@ def build_home() -> None:
 
 <section class="block wrap">
 <div class="block-head">
-<div><span class="eyebrow">Selected research</span><h2>Papers and reports</h2></div>
-<a class="more" href="/research.html">All {len(papers)} →</a>
+<h2>Papers and reports</h2>
+<a class="more" href="/research.html">All {len(papers)} papers</a>
 </div>
 <div class="rows">{selected}</div>
 </section>
 
 <section class="block wrap" id="education">
 <div class="block-head">
-<div><span class="eyebrow">Background</span><h2>Education, work and honors</h2></div>
-<a class="more" href="/experience.html">All roles →</a>
+<h2>Education, work and honors</h2>
+<a class="more" href="/experience.html">All roles</a>
 </div>
 <div class="two">
 <div class="panel"><div class="edu">{edu}</div></div>
@@ -255,8 +242,7 @@ def build_home() -> None:
 </div>
 </section>
 """
-    page("index.html", "", site["bio"], body, scripts=(
-        f'{THREE}<script type="module" src="/assets/galaxy.js"></script>'))
+    page("index.html", "", site["bio"], body)
 
 
 def build_research() -> None:
@@ -268,20 +254,20 @@ def build_research() -> None:
     items = []
     for p in papers:
         dark = " dark" if is_dark(p) else ""
-        stat = " dark" if "stat" in p else ""
+        fig = (f'<a class="media{dark}" href="/papers/{p["slug"]}.html" '
+               f'tabindex="-1">{media(p)}</a>' if p.get("media") else "")
         items.append(f"""<article class="pub" data-tags="{' '.join(p["tags"])}">
-<a class="media{dark}{stat}" href="/papers/{p["slug"]}.html" tabindex="-1">{media(p)}</a>
+{fig}
 <div>
 <div class="meta"><span>{fmt_date(p["date"])}</span><span>{escape(p["venue"])}</span>
 <span>{" · ".join(TAGS[t] for t in p["tags"])}</span></div>
 <h3><a href="/papers/{p["slug"]}.html">{escape(p["title"])}</a></h3>
 <p class="summary">{escape(p["summary"])}</p>
 <p class="authors">{authors(p["authors"])}</p>
-<div class="pills"><a class="main" href="/papers/{p["slug"]}.html">Preview</a>{link_pills(p["links"], False)}</div>
+<div class="pills"><a href="/papers/{p["slug"]}.html">Preview</a>{link_pills(p["links"])}</div>
 </div></article>""")
     body = f"""
 <header class="page-head wrap">
-<span class="eyebrow">Research</span>
 <h1>Research</h1>
 <p>{len(papers)} papers, posts and reports, newest first. Each has its own page with the abstract, the main figure and a BibTeX entry.</p>
 </header>
@@ -299,15 +285,18 @@ def build_papers() -> None:
         older = papers[i + 1] if i + 1 < len(papers) else None
         nxt = ""
         if newer:
-            nxt += (f'<a href="/papers/{newer["slug"]}.html"><span>← Newer</span>'
+            nxt += (f'<a href="/papers/{newer["slug"]}.html"><span>Newer</span>'
                     f'{escape(newer["title"])}</a>')
         else:
             nxt += "<div></div>"
         if older:
             nxt += (f'<a class="r" href="/papers/{older["slug"]}.html">'
-                    f'<span>Older →</span>{escape(older["title"])}</a>')
-        dark = " dark" if is_dark(p) or "stat" in p else ""
-        caption = p["media"]["alt"] if p.get("media") else ""
+                    f'<span>Older</span>{escape(older["title"])}</a>')
+        dark = " dark" if is_dark(p) else ""
+        caption = escape(p["media"]["alt"]) if p.get("media") else ""
+        figure = (f'<figure class="figure"><div class="frame{dark}">'
+                  f'{media(p)}</div><figcaption>{caption}</figcaption>'
+                  f'</figure>' if p.get("media") else "")
         sub = (f'<p class="subtitle">{escape(p["subtitle"])}</p>'
                if p.get("subtitle") else "")
         advisor = (f" · Advised by {escape(p['advisor'])}"
@@ -322,10 +311,7 @@ def build_papers() -> None:
 <p class="authors">{authors(p["authors"])}</p>
 <p class="meta">{escape(p["venue"])} · {fmt_date(p["date"])}{advisor}</p>
 <div class="pills">{link_pills(p["links"])}<a href="#cite">Cite</a></div>
-<figure class="figure">
-<div class="frame{dark}">{media(p)}</div>
-{f"<figcaption>{escape(caption)}</figcaption>" if caption else ""}
-</figure>
+{figure}
 </header>
 <section class="wrap paper-body">
 <div>
@@ -371,7 +357,6 @@ def build_experience() -> None:
 </div>""")
     body = f"""
 <header class="page-head wrap">
-<span class="eyebrow">Experience</span>
 <h1>Experience</h1>
 <p>Six roles since 2020, from network security at MIT to medical imaging at Epsilon.</p>
 </header>
@@ -381,25 +366,28 @@ def build_experience() -> None:
 
 
 def build_projects() -> None:
-    cards = []
+    cards, rest = [], []
     for pr in site["projects"]:
+        text = (f'<span class="year">{escape(pr["year"])}</span>'
+                f'<h3>{escape(pr["title"])}</h3><p>{escape(pr["text"])}</p>'
+                f'<div class="pills">{link_pills(pr["links"])}</div>')
         if pr["img"]:
-            m = f'<img src="{pr["img"]}" alt="" loading="lazy">'
-        else:
-            m = f'<div class="stat"><b>{escape(pr["stat"])}</b></div>'
-        cards.append(f"""<article class="proj">
-<div class="media">{m}</div>
-<div class="body"><span class="year">{escape(pr["year"])}</span>
-<h3>{escape(pr["title"])}</h3><p>{escape(pr["text"])}</p>
-<div class="pills">{link_pills(pr["links"], False)}</div></div>
+            cards.append(f"""<article class="proj">
+<div class="media"><img src="{pr["img"]}" alt="" loading="lazy"></div>
+<div class="body">{text}</div>
 </article>""")
+        else:
+            rest.append(f'<article class="small-proj">{text}</article>')
     body = f"""
 <header class="page-head wrap">
-<span class="eyebrow">Projects</span>
 <h1>Projects</h1>
 <p>Open-source tools, systems and competition work. For papers and reports, see <a class="link" href="/research.html">Research</a>.</p>
 </header>
-<section class="wrap grid2">{"".join(cards)}</section>"""
+<section class="wrap grid2">{"".join(cards)}</section>
+<section class="block wrap">
+<div class="block-head"><h2>Libraries and smaller tools</h2></div>
+<div class="small-projs">{"".join(rest)}</div>
+</section>"""
     page("projects.html", "Projects",
          "Open-source projects by Aakash Mishra.", body, "projects")
 
@@ -429,7 +417,6 @@ def build_hobbies() -> None:
     )
     body = f"""
 <header class="page-head wrap">
-<span class="eyebrow">Hobbies</span>
 <h1>Astrophotography and surfing</h1>
 </header>
 
@@ -437,7 +424,7 @@ def build_hobbies() -> None:
 <div class="story">
 <div><p>I started with a Nikon and a Newtonian reflector I built myself, and later shot deep-sky objects through Harvard's Clay Telescope. In high school I ran the astronomy club, and that interest turned into research: <a class="link" href="/papers/active-centaurs-photometry.html">photometry of active Centaurs</a>.</p></div>
 <div><p>The sphere below shows where each photo on this page sits in the sky. The gold line is the ecliptic, the path the Sun, Moon and planets follow, which is why Saturn and Jupiter sit right on it. Drag to turn the sky and click a label to jump to the photo.</p>
-<p><a class="link" href="https://scienceofspace101.wixsite.com/astronomy" target="_blank" rel="noopener">My old astronomy site ↗</a></p></div>
+<p><a class="link" href="https://scienceofspace101.wixsite.com/astronomy" target="_blank" rel="noopener">My old astronomy site</a></p></div>
 </div>
 <div class="sky-stage" style="margin-top:36px">
 <canvas aria-label="3D celestial sphere with the photographed objects marked"></canvas>
@@ -450,7 +437,7 @@ def build_hobbies() -> None:
 </section>
 
 <section class="block wrap">
-<div class="block-head"><div><span class="eyebrow">Daylight</span><h2>Surfing and photography</h2></div></div>
+<div class="block-head"><h2>Surfing and photography</h2></div>
 <div class="life">{life}</div>
 </section>
 """

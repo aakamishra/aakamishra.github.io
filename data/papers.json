@@ -149,10 +149,6 @@
     "tags": [
       "medical"
     ],
-    "stat": {
-      "value": "93.9% → 66.7%",
-      "label": "accuracy once key clinical details in the question change"
-    },
     "summary": "Multiple-choice scores make LLMs look better at cardiology than they are. Open-ended and clinically modified questions expose the gap.",
     "abstract": [
       "Background: Large language models (LLMs) achieve impressive accuracy on multiple-choice (MC) medical examinations, but this performance alone may not accurately reflect their clinical reasoning abilities. MC evaluations of LLMs risk inflating apparent competence by rewarding recall rather than genuine clinical adaptability, particularly in specialized medical domains such as cardiology.",
@@ -337,10 +333,6 @@
     "tags": [
       "systems"
     ],
-    "stat": {
-      "value": "pip install phoss",
-      "label": "open-source simulator for hyperparameter search"
-    },
     "summary": "PHOSS simulates training-loss landscapes so multi-fidelity hyperparameter schedulers can be compared quickly and cheaply, without training real models.",
     "abstract": [
       "Comparing multi-fidelity schedulers for hyperparameter optimization normally means training many real models, which is slow and expensive. We introduce PHOSS, an open-source Python platform that generates synthetic loss landscapes from a chosen distribution and workload, runs distributed hyperparameter searches over them with Ray Tune, and reports regret and loss curves across seeds. This makes it fast and low-cost to compare schedulers across many configurations."
@@ -506,10 +498,6 @@
     "tags": [
       "science"
     ],
-    "stat": {
-      "value": "Drought",
-      "label": "chapter in Approaches for Enhancing Abiotic Stress Tolerance in Plants"
-    },
     "summary": "A review of how plants respond to drought and the approaches used to make crops more drought-tolerant.",
     "abstract": [
       "Book chapter in Approaches for Enhancing Abiotic Stress Tolerance in Plants (CRC Press, 2019), pages 79 to 98. It reviews plant responses to drought stress and the approaches used to improve drought tolerance."
@@ -544,10 +532,6 @@
     "tags": [
       "science"
     ],
-    "stat": {
-      "value": "Climate",
-      "label": "chapter in Plant Biotechnology: Recent Advancements and Developments"
-    },
     "summary": "A review of engineering abiotic stress tolerance in crops to offset the effects of climate change.",
     "abstract": [
       "Book chapter in Plant Biotechnology: Recent Advancements and Developments (Springer, 2017), pages 59 to 73. It reviews approaches to engineering abiotic stress tolerance traits in plants as a way to mitigate the effects of climate change on crops."

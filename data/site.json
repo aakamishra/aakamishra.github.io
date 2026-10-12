@@ -2,13 +2,6 @@
   "name": "Aakash Mishra",
   "tagline": "Founding Researcher at Epsilon Health",
   "bio": "I build medical imaging and language models at Epsilon Health, an AI-native radiology practice in San Francisco. Before that I spent three years at Meta, most recently as a senior machine learning engineer and area lead in Monetization. I studied computer science at Harvard and Stanford.",
-  "interests": [
-    "Medical imaging",
-    "Vision-language models",
-    "Reinforcement learning",
-    "ML systems",
-    "Astronomy"
-  ],
   "email": "aakamishra1@gmail.com",
   "social": [
     {
@@ -167,7 +160,6 @@
       "title": "PHOSS",
       "year": "2022",
       "img": null,
-      "stat": "pip install phoss",
       "text": "A simulator for distributed hyperparameter search. It generates synthetic loss landscapes so schedulers can be compared without training real models.",
       "links": [
         {
@@ -196,7 +188,6 @@
       "title": "Ray PowerSGD",
       "year": "2022",
       "img": null,
-      "stat": "all-reduce · NCCL",
       "text": "A Ray-based all-reduce implementation of PowerSGD, the low-rank gradient compression method for distributed training.",
       "links": [
         {
@@ -233,7 +224,6 @@
       "title": "NoetherAutoDiff",
       "year": "2020",
       "img": null,
-      "stat": "∂f/∂x",
       "text": "An automatic differentiation library for differential-equation matrices written as text or LaTeX, usable from C++ and Python.",
       "links": [
         {
@@ -246,7 +236,6 @@
       "title": "dftoltx",
       "year": "2022",
       "img": null,
-      "stat": "\\begin{tabular}",
       "text": "Turns pandas DataFrames into LaTeX table code.",
       "links": [
         {
