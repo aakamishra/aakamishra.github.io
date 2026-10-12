@@ -159,7 +159,7 @@
     {
       "title": "PHOSS",
       "year": "2022",
-      "img": null,
+      "img": "/images/papers/phoss.webp",
       "text": "A simulator for distributed hyperparameter search. It generates synthetic loss landscapes so schedulers can be compared without training real models.",
       "links": [
         {
@@ -185,18 +185,6 @@
       ]
     },
     {
-      "title": "Ray PowerSGD",
-      "year": "2022",
-      "img": null,
-      "text": "A Ray-based all-reduce implementation of PowerSGD, the low-rank gradient compression method for distributed training.",
-      "links": [
-        {
-          "label": "Code",
-          "url": "https://github.com/aakamishra/ray-powerSGD"
-        }
-      ]
-    },
-    {
       "title": "Boston Datathon winner",
       "year": "2022",
       "img": "/images/datathon_news.png",
@@ -217,6 +205,18 @@
         {
           "label": "Code",
           "url": "https://github.com/aakamishra/robocup-prototype"
+        }
+      ]
+    },
+    {
+      "title": "Ray PowerSGD",
+      "year": "2022",
+      "img": null,
+      "text": "A Ray-based all-reduce implementation of PowerSGD, the low-rank gradient compression method for distributed training.",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/aakamishra/ray-powerSGD"
         }
       ]
     },

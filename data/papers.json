@@ -167,6 +167,11 @@
       "key": "chao2025unmasking",
       "journal": "medRxiv",
       "doi": "10.1101/2025.05.17.25327814"
+    },
+    "media": {
+      "src": "/images/papers/llm-cardiology.webp",
+      "alt": "Answer and reasoning accuracy by cardiology category, multiple-choice (blue) versus open-ended (orange)",
+      "fit": "contain"
     }
   },
   {
@@ -359,7 +364,12 @@
       "publisher": "Springer",
       "doi": "10.1007/978-3-031-48232-8_7"
     },
-    "abstract_label": "Overview"
+    "abstract_label": "Overview",
+    "media": {
+      "src": "/images/papers/phoss.webp",
+      "alt": "(a) Original CIFAR-10 ConvNet tuning results next to (b) PHOSS's simulated cumulative regret for random search, ASHA, SHA and PBT",
+      "fit": "contain"
+    }
   },
   {
     "slug": "nas-assistant-thesis",
