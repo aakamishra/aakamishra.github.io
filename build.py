@@ -228,7 +228,6 @@ def build_home() -> None:
 <div><span class="eyebrow">Now</span>
 <h3>Epsilon Health</h3>
 <p>{escape(eps["blurb"])}</p></div>
-<a class="more" href="{eps["url"]}" target="_blank" rel="noopener">epsilon.health ↗</a>
 </div>
 <div class="eps-cards">{eps_cards}</div>
 </div>
