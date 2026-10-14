@@ -40,9 +40,10 @@
       "points": [
         "Founding member of the research team behind an AI-native radiology practice.",
         "Training and serving the imaging and report-generation models used by Epsilon's radiologists.",
-        "Published research on model explainability and X-ray preprocessing."
+        "Published research on model explainability, X-ray preprocessing, and how image tokens come to represent clinical findings."
       ],
       "papers": [
+        "radiology-vlm-latent-space",
         "auditing-model-attention",
         "cr-image-preprocessing"
       ],

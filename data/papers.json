@@ -1,5 +1,43 @@
 [
   {
+    "slug": "radiology-vlm-latent-space",
+    "title": "How Image Tokens Learn the Language of Radiology",
+    "subtitle": "What 2,400 X-ray studies reveal about how models represent clinical findings",
+    "date": "2026-10-14",
+    "venue": "Epsilon Health Research",
+    "authors": [
+      "Aakash Mishra",
+      "Arjun Karpur"
+    ],
+    "tags": [
+      "medical"
+    ],
+    "featured": true,
+    "epsilon": true,
+    "media": {
+      "src": "/images/epsilon/latent-space.gif",
+      "alt": "Chest studies plotted on the emphysema and heart failure finding words, separating as they move from the input to the output of the language model",
+      "fit": "cover"
+    },
+    "summary": "We read the image tokens of our report-drafting model through its own clinical vocabulary and with linear probes. Deeper in the language model, they come to point at the right findings, with no direct supervision on the image tokens.",
+    "abstract": [
+      "Before a vision-language model writes a single word, it embeds each input image as a sequence of image tokens that have not yet seen any text. Do these tokens carry information that a radiologist would use, and how does the language model handle them?",
+      "In this post, we read the hidden states of image tokens from a radiology report-drafting VLM at increasing layer depths, and investigate them through the model's own clinical vocabulary and with linear probes. We observe that clinically useful information is largely present within hidden states of the input and early layers of the language model. Interestingly, as the image tokens are processed by the causal language decoder in later layers, their representations increasingly align with the model's own words for the findings present, despite no direct supervision on the image tokens."
+    ],
+    "links": [
+      {
+        "label": "Read the post",
+        "url": "https://www.epsilon.health/research/radiology-vlm-latent-space"
+      }
+    ],
+    "bib": {
+      "type": "misc",
+      "key": "mishra2026image",
+      "howpublished": "Epsilon Health Research",
+      "url": "https://www.epsilon.health/research/radiology-vlm-latent-space"
+    }
+  },
+  {
     "slug": "auditing-model-attention",
     "title": "Auditing Our Models for Visual Explainability",
     "subtitle": "Is learned attention sufficient for faithful and well-localized heatmaps?",

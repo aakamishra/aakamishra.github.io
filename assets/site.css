@@ -118,6 +118,9 @@ section.block { padding-block: 80px 0; }
   transition: transform .15s, border-color .15s;
 }
 .paper-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.eps-cards .paper-card:first-child { grid-column: span 2; flex-direction: row; }
+.eps-cards .paper-card:first-child .media { flex: 0 0 58%; border-bottom: 0; border-right: 1px solid var(--rule); }
+.eps-cards .paper-card:first-child h4 { font-size: 24px; }
 .paper-card .media { aspect-ratio: 2 / 1; background: #000; overflow: hidden; border-bottom: 1px solid var(--rule); }
 .paper-card .media img { width: 100%; height: 100%; object-fit: cover; }
 .paper-card .media img.contain { object-fit: contain; }
@@ -376,6 +379,8 @@ body.night {
   .job { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .eps { padding: 22px; }
   .eps .top { grid-template-columns: minmax(0, 1fr); }
+  .eps-cards .paper-card:first-child { grid-column: auto; flex-direction: column; }
+  .eps-cards .paper-card:first-child .media { flex: none; border-right: 0; border-bottom: 1px solid var(--rule); }
 }
 @media (max-width: 560px) {
   .wrap { padding-inline: 16px; }
