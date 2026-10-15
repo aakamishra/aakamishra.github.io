@@ -271,7 +271,6 @@ def build_research() -> None:
     body = f"""
 <header class="page-head wrap">
 <h1>Research</h1>
-<p>{len(papers)} papers, posts and reports, newest first. Each has its own page with the abstract, the main figure and a BibTeX entry.</p>
 </header>
 <section class="wrap">
 <div class="filters" role="group" aria-label="Filter by topic">{btns}</div>
